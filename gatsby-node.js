@@ -1,4 +1,5 @@
-'use strict'
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-var-requires */
 
 const path = require('path')
 
@@ -34,6 +35,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         name: 'layout',
         value: layout || ''
       })
+      break
+    }
+    default: {
+      break
     }
   }
 }

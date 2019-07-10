@@ -1,6 +1,18 @@
 /* eslint-disable max-len */
 
 export const colors = {
+  white: '#fff',
+  gray01: '#fafafa',
+  gray02: '#efefef',
+  gray03: '#999',
+  gray04: '#888',
+  gray05: '#666',
+  gray06: '#444',
+  gray07: '#333',
+  gray08: '#111',
+  black: '#000',
+  purple: '#49318c',
+  orange: '#fb8d3e',
   brand: '#663399',
   lilac: '#9d7cbf',
   accent: '#ffb238',
@@ -16,9 +28,7 @@ export const colors = {
     dark: 'hsla(270, 17.119554496%, 0%, 0.92)',
     copy: 'hsla(270, 15.797828016000002%, 0%, 0.88)',
     calm: 'rgba(0, 0, 0, 0.54)'
-  },
-  white: '#fff',
-  black: '#000'
+  }
 }
 
 export const fonts = {
@@ -42,6 +52,33 @@ export const widths = {
   xl: 1140
 }
 
+export const typeScale = {
+  h1: {
+    fontSize: 48,
+    lineHeight: 56
+  },
+  h2: {
+    fontSize: 40,
+    lineHeight: 48
+  },
+  h3: {
+    fontSize: 32,
+    lineHeight: 40
+  },
+  h4: {
+    fontSize: 24,
+    lineHeight: 32
+  },
+  h5: {
+    fontSize: 20,
+    lineHeight: 28
+  },
+  p: {
+    fontSize: 16,
+    lineHeight: 24
+  }
+}
+
 export const dimensions = {
   fontSize: {
     regular: 16,
@@ -61,5 +98,6 @@ export const dimensions = {
 }
 
 export const heights = {
-  header: 60
+  header: 80,
+  brandLogo: 60
 }
