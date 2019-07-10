@@ -45,7 +45,7 @@ const normalize = `
   table {
     width: 100%;
     margin-bottom: 1rem;
-    border: 1px solid ${colors.ui.light};
+    border: 1px solid ${colors.gray02};
     font-size: 85%;
     border-collapse: collapse;
   }
@@ -53,7 +53,7 @@ const normalize = `
   td,
   th {
     padding: .25rem .5rem;
-    border: 1px solid ${colors.ui.light};
+    border: 1px solid ${colors.gray02};
   }
 
   th {
@@ -64,10 +64,10 @@ const normalize = `
     tr {
       &:nth-of-type(odd) {
         td {
-          background-color: ${colors.ui.whisper};
+          background-color: ${colors.gray01};
         }
         tr {
-          background-color: ${colors.ui.whisper};
+          background-color: ${colors.gray01};
         }
       }
     }
@@ -108,14 +108,14 @@ const normalize = `
     position: relative;
     margin: 1.5rem 0;
     border: 0;
-    border-top: 1px solid ${colors.ui.light};
+    border-top: 1px solid ${colors.gray02};
   }
 
   blockquote {
     margin: .8rem 0;
     padding: .5rem 1rem;
-    border-left: .25rem solid ${colors.ui.light};
-    color: ${colors.gray.calm};
+    border-left: .25rem solid ${colors.gray02};
+    color: ${colors.gray05};
 
     p {
       &:last-child {
