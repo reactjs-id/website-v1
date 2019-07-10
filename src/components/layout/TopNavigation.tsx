@@ -7,7 +7,7 @@ import logo from '../../assets/images/logo-transparent.png'
 
 const Root = styled('nav')`
   display: grid;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
