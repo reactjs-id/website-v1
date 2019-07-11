@@ -98,7 +98,7 @@ const li = styled('li')`
 `;
 
 const LinkStyle = css`
-  color: ${colors.purple};
+  color: ${colors.blue};
   text-decoration: none;
 
   &:hover,
