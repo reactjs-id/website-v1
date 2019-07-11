@@ -1,7 +1,7 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
+import * as React from 'react';
+import styled from '@emotion/styled';
 
-import { typeScale } from '../../styles/variables'
+import { typeScale } from '../../styles/variables';
 
 const Root = styled('p')`
   margin-top: 20px;
@@ -11,11 +11,11 @@ const Root = styled('p')`
   &:first-child {
     margin-top: 0;
   }
-`
+`;
 
 interface ParagraphProps {
-  className?: string
-  style?: React.CSSProperties
+  className?: string;
+  style?: React.CSSProperties;
 }
 
 function Paragraph({ children, className, style }: React.PropsWithChildren<ParagraphProps>) {
@@ -23,12 +23,12 @@ function Paragraph({ children, className, style }: React.PropsWithChildren<Parag
     <Root className={className} style={style}>
       {children}
     </Root>
-  )
+  );
 }
 
 Paragraph.defaultProps = {
   className: undefined,
-  style: undefined
-}
+  style: undefined,
+};
 
-export default Paragraph
+export default Paragraph;

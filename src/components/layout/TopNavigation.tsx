@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
-import styled from '@emotion/styled'
-import { transparentize } from 'polished'
-import { widths, breakpoints, heights, colors } from '../../styles/variables'
-import logo from '../../assets/images/logo-transparent.png'
+import * as React from 'react';
+import { Link } from 'gatsby';
+import styled from '@emotion/styled';
+import { transparentize } from 'polished';
+import { widths, breakpoints, heights, colors } from '../../styles/variables';
+import logo from '../../assets/images/logo-transparent.png';
 
 const Root = styled('nav')`
   display: grid;
@@ -15,7 +15,7 @@ const Root = styled('nav')`
   color: ${colors.white};
   height: ${heights.header}px;
   z-index: 50;
-`
+`;
 
 const Inner = styled('ul')`
   display: flex;
@@ -25,7 +25,7 @@ const Inner = styled('ul')`
   margin: 0;
   padding: 0;
   list-style-type: none;
-`
+`;
 
 const Brand = styled('li')`
   display: flex;
@@ -33,7 +33,7 @@ const Brand = styled('li')`
   position: relative;
   height: 100%;
   margin-right: auto;
-`
+`;
 
 const MenuItem = styled('li')`
   display: flex;
@@ -55,12 +55,12 @@ const MenuItem = styled('li')`
       text-decoration: none;
     }
   }
-`
+`;
 
 const BrandLogo = styled('img')`
   display: block;
   height: ${heights.brandLogo}px;
-`
+`;
 
 const HomepageLink = styled(Link)`
   display: flex;
@@ -81,10 +81,10 @@ const HomepageLink = styled(Link)`
     text-align: center;
     font-size: 1.5rem;
   }
-`
+`;
 
 interface TopNavigationProps {
-  title: string
+  title: string;
 }
 
 const TopNavigation: React.FC<TopNavigationProps> = ({ title }) => (
@@ -103,6 +103,6 @@ const TopNavigation: React.FC<TopNavigationProps> = ({ title }) => (
       </MenuItem>
     </Inner>
   </Root>
-)
+);
 
-export default TopNavigation
+export default TopNavigation;

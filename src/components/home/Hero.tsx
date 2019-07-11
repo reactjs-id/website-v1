@@ -1,8 +1,10 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import { keyframes } from '@emotion/core'
-import { heights, widths, breakpoints, typeScale, colors } from '../../styles/variables'
-import Paragraph from '../ui/Paragraph'
+import * as React from 'react';
+import styled from '@emotion/styled';
+import { keyframes } from '@emotion/core';
+
+import { heights, widths, breakpoints, typeScale, colors } from '../../styles/variables';
+import Paragraph from '../ui/Paragraph';
+import pattern from '../../assets/images/shattered-dark.png';
 
 const flicker = keyframes`
   0% {
@@ -14,9 +16,10 @@ const flicker = keyframes`
   100% {
     background-position: 0% 50%
   }
-`
+`;
 
 const Root = styled('header')`
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr minmax(auto, ${widths.xl}px) 1fr 1fr;
   width: 100%;
@@ -27,13 +30,23 @@ const Root = styled('header')`
   background-image: linear-gradient(to right bottom, #49318c, #8b348b, #bc4183, #e05978, #f87b6e);
   background-size: 400% 400%;
   animation: ${flicker} 15s ease infinite;
-`
+  z-index: 0;
+
+  &::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: url(${pattern});
+  }
+`;
 
 const Inner = styled('div')`
   display: flex;
   align-items: center;
   grid-column: 3/4;
-`
+  z-index: 1;
+`;
 
 const SectionContent = styled('div')`
   color: ${colors.white};
@@ -50,7 +63,7 @@ const SectionContent = styled('div')`
   @media (min-width: ${breakpoints.xl}px) {
     max-width: 50%;
   }
-`
+`;
 
 const Heading = styled('h2')`
   margin: 0;
@@ -60,7 +73,7 @@ const Heading = styled('h2')`
   font-weight: 300;
   color: ${colors.white};
   text-transform: uppercase;
-`
+`;
 
 const Title = styled('h3')`
   margin-top: 0;
@@ -73,7 +86,7 @@ const Title = styled('h3')`
     font-size: ${typeScale.h1.fontSize}px;
     line-height: ${typeScale.h1.lineHeight}px;
   }
-`
+`;
 
 const DateAndLocation = styled('h4')`
   margin: 0;
@@ -85,7 +98,7 @@ const DateAndLocation = styled('h4')`
     font-size: ${typeScale.h4.fontSize}px;
     line-height: ${typeScale.h4.lineHeight}px;
   }
-`
+`;
 
 function Hero() {
   return (
@@ -97,13 +110,13 @@ function Hero() {
           <DateAndLocation>Selasa, 16 Juli 2019 - 19:00</DateAndLocation>
           <DateAndLocation>Qlue HQ - Jl. Pejaten Barat No.13, Jakarta Selatan</DateAndLocation>
           <Paragraph>
-            After a few dormant years, let's resurrect React Indonesia community! All topics will be both friendly for beginners and fun for
-            experienced coders.
+            After a few dormant years, let&apos;s resurrect React Indonesia community! All topics
+            will be both friendly for beginners and fun for experienced coders.
           </Paragraph>
         </SectionContent>
       </Inner>
     </Root>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

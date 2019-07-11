@@ -1,17 +1,17 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import { css } from '@emotion/core'
-import { widths, typeScale, colors, breakpoints } from '../../styles/variables'
+import * as React from 'react';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
+import { widths, typeScale, colors, breakpoints } from '../../styles/variables';
 
 interface CustomisableStyleProps {
-  textColor?: string
-  backgroundColor?: string
-  headingColor?: string
+  textColor?: string;
+  backgroundColor?: string;
+  headingColor?: string;
 }
 
 interface CenterableProps {
-  fullWidth?: boolean
-  centered?: boolean
+  fullWidth?: boolean;
+  centered?: boolean;
 }
 
 const Section = styled('section')<CustomisableStyleProps>`
@@ -20,7 +20,7 @@ const Section = styled('section')<CustomisableStyleProps>`
   padding: 96px 24px;
   color: ${props => props.textColor || colors.white};
   background-color: ${props => props.backgroundColor || colors.gray08};
-`
+`;
 
 const SectionStyles = css`
   @media (min-width: ${breakpoints.sm}px) {
@@ -35,11 +35,11 @@ const SectionStyles = css`
   @media (min-width: ${breakpoints.xl}px) {
     max-width: 50%;
   }
-`
+`;
 
 const FullWidthCentered = css`
   text-align: center;
-`
+`;
 
 const CenteredStyles = css`
   margin: 0 auto;
@@ -52,30 +52,30 @@ const CenteredStyles = css`
   @media (min-width: ${breakpoints.lg}px) {
     max-width: 75%;
   }
-`
+`;
 
 const determineSectionContentStyles = (props: CenterableProps) => {
   if (props.centered) {
     if (props.fullWidth) {
-      return FullWidthCentered
+      return FullWidthCentered;
     }
 
-    return CenteredStyles
+    return CenteredStyles;
   }
 
   if (props.fullWidth) {
-    return null
+    return null;
   }
 
-  return SectionStyles
-}
+  return SectionStyles;
+};
 
 const SectionContent = styled('div')<CenterableProps>`
   grid-column: 3/4;
   width: 100%;
 
   ${determineSectionContentStyles}
-`
+`;
 
 const Heading = styled('h2')<CustomisableStyleProps>`
   margin: 0;
@@ -85,7 +85,7 @@ const Heading = styled('h2')<CustomisableStyleProps>`
   font-weight: 300;
   color: ${props => props.headingColor || colors.orange};
   text-transform: uppercase;
-`
+`;
 
 const Title = styled('h3')`
   margin: 0;
@@ -97,11 +97,11 @@ const Title = styled('h3')`
     font-size: ${typeScale.h1.fontSize}px;
     line-height: ${typeScale.h1.lineHeight}px;
   }
-`
+`;
 
 interface HomepageSectionProps extends CenterableProps, CustomisableStyleProps {
-  heading?: string
-  title: string
+  heading?: string;
+  title: string;
 }
 
 function HomepageSection({
@@ -112,7 +112,7 @@ function HomepageSection({
   backgroundColor,
   headingColor,
   textColor,
-  fullWidth
+  fullWidth,
 }: React.PropsWithChildren<HomepageSectionProps>) {
   return (
     <Section backgroundColor={backgroundColor} textColor={textColor}>
@@ -122,12 +122,12 @@ function HomepageSection({
         {children}
       </SectionContent>
     </Section>
-  )
+  );
 }
 
 HomepageSection.defaultProps = {
   centered: false,
-  heading: undefined
-}
+  heading: undefined,
+};
 
-export default HomepageSection
+export default HomepageSection;

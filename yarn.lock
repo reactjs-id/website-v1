@@ -4357,7 +4357,7 @@ eslint-config-airbnb-base@^13.2.0:
     object.assign "^4.1.0"
     object.entries "^1.1.0"
 
-eslint-config-airbnb@^17.1.1:
+eslint-config-airbnb@17.1.1:
   version "17.1.1"
   resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-17.1.1.tgz#2272e0b86bb1e2b138cdf88d07a3b6f4cda3d626"
   integrity sha512-xCu//8a/aWqagKljt+1/qAM62BYZeNq04HmdevG5yUGWpja0I/xhqd6GdLRch5oetEGFiJAnvtGuTEAese53Qg==
@@ -4365,18 +4365,6 @@ eslint-config-airbnb@^17.1.1:
     eslint-config-airbnb-base "^13.2.0"
     object.assign "^4.1.0"
     object.entries "^1.1.0"
-
-eslint-config-blvd@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-blvd/-/eslint-config-blvd-0.2.0.tgz#fdeabcac50a97570765dce946d57e78a429d34d5"
-  integrity sha512-3x8GXBIOTZzU4GPUIiBNdv8nIXA6vwMxQ3o6TXgNaLks6TlydWE/ti+NNCPxpZasKHG5rX1u0OkNM50VI7oKKA==
-  dependencies:
-    "@typescript-eslint/eslint-plugin" "^1.11.0"
-    "@typescript-eslint/parser" "^1.11.0"
-    eslint-config-airbnb "^17.1.1"
-    eslint-plugin-import "^2.18.0"
-    eslint-plugin-jsx-a11y "^6.2.3"
-    eslint-plugin-react "^7.14.2"
 
 eslint-config-prettier@^6.0.0:
   version "6.0.0"
@@ -4482,7 +4470,7 @@ eslint-plugin-jsx-a11y@^6.0.3:
     has "^1.0.3"
     jsx-ast-utils "^2.0.1"
 
-eslint-plugin-jsx-a11y@^6.2.3:
+eslint-plugin-jsx-a11y@^6.1.2:
   version "6.2.3"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.2.3.tgz#b872a09d5de51af70a97db1eea7dc933043708aa"
   integrity sha512-CawzfGt9w83tyuVekn0GDPU9ytYtxyxyFZ3aSWROmnRRFQFT2BiPJd7jvRdzNDi6oLWaS2asMeYSNMjWTV4eNg==
@@ -4504,7 +4492,7 @@ eslint-plugin-prettier@^3.1.0:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-react@^7.14.2:
+eslint-plugin-react@^7.12.4:
   version "7.14.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.14.2.tgz#94c193cc77a899ac0ecbb2766fbef88685b7ecc1"
   integrity sha512-jZdnKe3ip7FQOdjxks9XPN0pjUKZYq48OggNMd16Sk+8VXx6JOvXmlElxROCgp7tiUsTsze3jd78s/9AFJP2mA==

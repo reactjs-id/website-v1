@@ -1,4 +1,4 @@
-import { colors, breakpoints } from './variables'
+import { colors, breakpoints } from './variables';
 
 const normalize = `
   html {
@@ -128,6 +128,6 @@ const normalize = `
       padding-left: 1.25rem;
     }
   }
-`
+`;
 
-export default normalize
+export default normalize;

@@ -1,31 +1,31 @@
-import * as React from 'react'
-import { graphql } from 'gatsby'
-import convert from 'htmr'
+import * as React from 'react';
+import { graphql } from 'gatsby';
+import convert from 'htmr';
 
 interface PageTemplateProps {
   data: {
     site: {
       siteMetadata: {
-        title: string
-        description: string
+        title: string;
+        description: string;
         author: {
-          name: string
-          url: string
-        }
-      }
-    }
+          name: string;
+          url: string;
+        };
+      };
+    };
     markdownRemark: {
-      html: string
-      excerpt: string
+      html: string;
+      excerpt: string;
       frontmatter: {
-        title: string
-      }
-    }
-  }
+        title: string;
+      };
+    };
+  };
 }
 
 function renderMarkdown(html: string) {
-  return convert(html)
+  return convert(html);
 }
 
 const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
@@ -34,10 +34,10 @@ const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
       <h1>{data.markdownRemark.frontmatter.title}</h1>
       {renderMarkdown(data.markdownRemark.html)}
     </div>
-  )
-}
+  );
+};
 
-export default PageTemplate
+export default PageTemplate;
 
 export const query = graphql`
   query PageTemplateQuery($slug: String!) {
@@ -59,4 +59,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
