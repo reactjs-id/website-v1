@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { darken } from 'polished';
 
 import { colors, typeScale, breakpoints } from '../../styles/variables';
+import ArrowRightIcon from '../ui/ArrowRightIcon';
 
 const Heading = styled('h4')`
   margin: 0;
@@ -56,6 +57,9 @@ const CTAButton = styled('span')`
   transition: color 0.3s ease, background-color 0.3s ease;
 
   .icon {
+    display: block;
+    width: 16px;
+    height: 16px;
     margin-left: 8px;
   }
 `;
@@ -115,7 +119,10 @@ function LearningCard({
       <CardSection>{children}</CardSection>
       <CardFooter>
         <CTAButton>
-          <span>Kunjungi Situs</span> <span className="icon">🡢</span>
+          <span>Kunjungi Situs</span>{' '}
+          <span className="icon">
+            <ArrowRightIcon />
+          </span>
         </CTAButton>
       </CardFooter>
     </CardAnchor>

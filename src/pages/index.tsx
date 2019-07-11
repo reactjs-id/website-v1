@@ -11,6 +11,7 @@ import HomepageSection from '../components/home/HomepageSection';
 import Paragraph from '../components/ui/Paragraph';
 import CTAButton from '../components/ui/CTAButton';
 import Page from '../components/layout/Page';
+import ArrowRightIcon from '../components/ui/ArrowRightIcon';
 
 const LearningCardGrid = styled('div')`
   display: grid;
@@ -48,7 +49,12 @@ function IndexPage({ data }: IndexPageProps) {
           meetup setiap bulannya, dimana para developer React bertukar informasi mengenai React dan
           ekosistemnya.
         </Paragraph>
-        <CTAButton light inline icon={<>🡢</>} href="https://www.meetup.com/reactindonesia/">
+        <CTAButton
+          light
+          inline
+          icon={<ArrowRightIcon />}
+          href="https://www.meetup.com/reactindonesia/"
+        >
           Bergabung
         </CTAButton>
       </HomepageSection>

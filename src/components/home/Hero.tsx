@@ -6,6 +6,7 @@ import { heights, widths, breakpoints, typeScale, colors } from '../../styles/va
 import Paragraph from '../ui/Paragraph';
 import pattern from '../../assets/images/shattered-dark.png';
 import CTAButton from '../ui/CTAButton';
+import ArrowRightIcon from '../ui/ArrowRightIcon';
 
 const flicker = keyframes`
   0% {
@@ -145,7 +146,7 @@ function Hero({ isHomepage }: HeroProps) {
           <CTAButton
             light
             inline
-            icon={<>🡢</>}
+            icon={<ArrowRightIcon />}
             href="https://www.meetup.com/reactindonesia/events/263022521/"
           >
             RSVP Sekarang
