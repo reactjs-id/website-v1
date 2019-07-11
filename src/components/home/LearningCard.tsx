@@ -72,7 +72,8 @@ const CardAnchor = styled('a')`
   color: ${colors.gray08};
   text-decoration: none;
   overflow: hidden;
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s ease;
 
   &:hover,
   &:visited,
@@ -84,6 +85,8 @@ const CardAnchor = styled('a')`
 
   &:hover,
   &:focus {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
+
     ${CTAButton} {
       color: ${colors.white};
       background-color: ${darken(0.2, colors.blue)};
