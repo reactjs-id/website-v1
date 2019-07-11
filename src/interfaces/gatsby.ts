@@ -8,5 +8,6 @@ export interface GatsbyNode<T> {
 
 export interface SiteMetadata {
   title: string;
+  tagline: string;
   description: string;
 }

@@ -43,9 +43,11 @@ const Root = styled('header')`
 `;
 
 const HeadbarRoot = styled('header')`
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: ${heights.header}px;
+  height: calc(${heights.header}px + 104px);
   background-image: linear-gradient(to right bottom, #49318c, #8b348b, #bc4183, #e05978, #f87b6e);
   background-size: 400% 400%;
   animation: ${flicker} 15s ease infinite;

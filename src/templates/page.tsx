@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import convert from 'htmr';
+
+import Page from '../components/layout/Page';
+import PageContent from '../components/layout/PageContent';
 
 interface PageTemplateProps {
   data: {
@@ -24,16 +26,13 @@ interface PageTemplateProps {
   };
 }
 
-function renderMarkdown(html: string) {
-  return convert(html);
-}
-
 const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
+  const { frontmatter, html } = data.markdownRemark;
+
   return (
-    <div>
-      <h1>{data.markdownRemark.frontmatter.title}</h1>
-      {renderMarkdown(data.markdownRemark.html)}
-    </div>
+    <Page isArticle>
+      <PageContent title={frontmatter.title} html={html} />
+    </Page>
   );
 };
 

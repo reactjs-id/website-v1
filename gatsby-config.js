@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: 'ReactJS ID',
-    description: 'Komunitas ReactJS ID Indonesia.',
+    tagline: 'Komunitas ReactJS ID Indonesia.',
+    description:
+      'ReactJS ID adalah komunitas para developer React dan React Native. Kami mengadakan ajang meetup setiap bulannya, dimana para developer React bertukar informasi mengenai React dan ekosistemnya.',
     keywords:
       'reactjs, react, indonesia, community, reactjs community, reactjs community indonesia, komunitas react indonesia',
     siteUrl: 'https://react.id',

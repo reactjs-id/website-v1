@@ -35,7 +35,7 @@ function IndexPage({ data }: IndexPageProps) {
     <Page>
       <Helmet>
         <title>
-          {siteMetadata.title} &middot; {siteMetadata.description}
+          {siteMetadata.title} &middot; {siteMetadata.tagline}
         </title>
       </Helmet>
       <HomepageSection heading="Selamat Datang" title="Komunitas Developer ReactJS Indonesia">
@@ -116,6 +116,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        tagline
         description
       }
     }
