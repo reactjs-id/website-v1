@@ -64,6 +64,8 @@ export const typeScale = {
   },
 };
 
+export const containerPadding = 24;
+
 export const heights = {
   header: 80,
   brandLogo: 60,

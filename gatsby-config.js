@@ -4,7 +4,7 @@ module.exports = {
     description: 'Komunitas ReactJS ID Indonesia.',
     keywords:
       'reactjs, react, indonesia, community, reactjs community, reactjs community indonesia, komunitas react indonesia',
-    siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com',
+    siteUrl: 'https://react.id',
     author: {
       name: 'Resi Respati',
       url: 'https://twitter.com/resir014',

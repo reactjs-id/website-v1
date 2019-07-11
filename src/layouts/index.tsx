@@ -1,13 +1,17 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { RouterProps } from '@reach/router';
 
 import 'modern-normalize';
 import '../styles/normalize';
 
 import LayoutRoot from '../components/layout/LayoutRoot';
-import LayoutMain from '../components/layout/LayoutMain';
 import TopNavigation from '../components/layout/TopNavigation';
+import Hero from '../components/home/Hero';
+import LayoutMain from '../components/layout/LayoutMain';
+import Footer from '../components/layout/Footer';
 
 interface StaticQueryProps {
   site: {
@@ -19,18 +23,20 @@ interface StaticQueryProps {
   };
 }
 
-const IndexLayout: React.FC = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query IndexLayoutQuery {
-        site {
-          siteMetadata {
-            title
-            description
-          }
-        }
+const query = graphql`
+  query IndexLayoutQuery {
+    site {
+      siteMetadata {
+        title
+        description
       }
-    `}
+    }
+  }
+`;
+
+const IndexLayout: React.FC<RouterProps> = ({ children, location }) => (
+  <StaticQuery
+    query={query}
     render={(data: StaticQueryProps) => (
       <LayoutRoot>
         <Helmet
@@ -41,7 +47,9 @@ const IndexLayout: React.FC = ({ children }) => (
           ]}
         />
         <TopNavigation title={data.site.siteMetadata.title} />
-        {children}
+        <Hero isHomepage={location && location.pathname === '/'} />
+        <LayoutMain>{children}</LayoutMain>
+        <Footer />
       </LayoutRoot>
     )}
   />

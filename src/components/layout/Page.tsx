@@ -1,11 +1,10 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 
-const StyledPage = styled('div')`
+const Div = styled('div')`
   display: block;
   flex: 1;
   position: relative;
-  margin-bottom: 3rem;
 `;
 
 interface PageProps {
@@ -13,7 +12,7 @@ interface PageProps {
 }
 
 const Page: React.FC<PageProps> = ({ children, className }) => (
-  <StyledPage className={className}>{children}</StyledPage>
+  <Div className={className}>{children}</Div>
 );
 
 export default Page;

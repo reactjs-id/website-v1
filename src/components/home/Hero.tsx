@@ -5,6 +5,7 @@ import { keyframes } from '@emotion/core';
 import { heights, widths, breakpoints, typeScale, colors } from '../../styles/variables';
 import Paragraph from '../ui/Paragraph';
 import pattern from '../../assets/images/shattered-dark.png';
+import CTAButton from '../ui/CTAButton';
 
 const flicker = keyframes`
   0% {
@@ -27,6 +28,24 @@ const Root = styled('header')`
   min-height: calc(100vh - 60px);
   padding: 24px;
   padding-top: calc(${heights.header}px + 24px);
+  background-image: linear-gradient(to right bottom, #49318c, #8b348b, #bc4183, #e05978, #f87b6e);
+  background-size: 400% 400%;
+  animation: ${flicker} 15s ease infinite;
+  z-index: 0;
+
+  &::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: url(${pattern});
+  }
+`;
+
+const HeadbarRoot = styled('header')`
+  position: relative;
+  width: 100%;
+  height: ${heights.header}px;
   background-image: linear-gradient(to right bottom, #49318c, #8b348b, #bc4183, #e05978, #f87b6e);
   background-size: 400% 400%;
   animation: ${flicker} 15s ease infinite;
@@ -80,7 +99,7 @@ const Title = styled('h3')`
   margin-bottom: 12px;
   font-size: ${typeScale.h2.fontSize}px;
   line-height: ${typeScale.h2.lineHeight}px;
-  font-weight: 500;
+  font-weight: 600;
 
   @media (min-width: ${breakpoints.md}px) {
     font-size: ${typeScale.h1.fontSize}px;
@@ -100,7 +119,15 @@ const DateAndLocation = styled('h4')`
   }
 `;
 
-function Hero() {
+interface HeroProps {
+  isHomepage?: boolean;
+}
+
+function Hero({ isHomepage }: HeroProps) {
+  if (!isHomepage) {
+    return <HeadbarRoot />;
+  }
+
   return (
     <Root>
       <Inner>
@@ -113,10 +140,22 @@ function Hero() {
             After a few dormant years, let&apos;s resurrect React Indonesia community! All topics
             will be both friendly for beginners and fun for experienced coders.
           </Paragraph>
+          <CTAButton
+            light
+            inline
+            icon={<>🡢</>}
+            href="https://www.meetup.com/reactindonesia/events/263022521/"
+          >
+            RSVP Sekarang
+          </CTAButton>
         </SectionContent>
       </Inner>
     </Root>
   );
 }
+
+Hero.defaultProps = {
+  isHomepage: false,
+};
 
 export default Hero;

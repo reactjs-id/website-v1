@@ -91,7 +91,7 @@ const Title = styled('h3')`
   margin: 0;
   font-size: ${typeScale.h2.fontSize}px;
   line-height: ${typeScale.h2.lineHeight}px;
-  font-weight: 500;
+  font-weight: 600;
 
   @media (min-width: ${breakpoints.md}px) {
     font-size: ${typeScale.h1.fontSize}px;
