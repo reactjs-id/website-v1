@@ -99,7 +99,7 @@ const TopNavigation: React.FC<TopNavigationProps> = ({ title }) => (
         <a href="https://www.meetup.com/reactindonesia/">Meetup</a>
       </MenuItem>
       <MenuItem>
-        <a href="https://github.com/resctjs-id/meetup">Submit a Talk</a>
+        <Link to="/submit-a-talk">Submit a Talk</Link>
       </MenuItem>
     </Inner>
   </Root>

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+
 import * as React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
@@ -5,7 +7,8 @@ import { css } from '@emotion/core';
 import convert from 'htmr';
 import { HtmrOptions } from 'htmr/src/types';
 
-import { typeScale, colors, heights } from '../../styles/variables';
+import { Link } from 'gatsby';
+import { typeScale, colors } from '../../styles/variables';
 
 const Root = styled('div')`
   grid-column: 3/4;
@@ -66,6 +69,29 @@ const p = styled('p')`
   }
 `;
 
+const ul = styled('ul')`
+  margin-bottom: 16px;
+`;
+
+const ol = styled('ol')`
+  margin-bottom: 16px;
+`;
+
+const li = styled('li')`
+  font-size: ${typeScale.p.fontSize}px;
+  line-height: ${typeScale.p.lineHeight}px;
+`;
+
+const LinkStyle = css`
+  color: ${colors.purple};
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+`;
+
 const Title = styled('section')`
   padding: 24px;
 
@@ -94,6 +120,26 @@ const options: Partial<HtmrOptions> = {
     h5,
     h6,
     p,
+    ul,
+    ol,
+    li,
+    a: (node: Partial<React.ReactHTMLElement<HTMLAnchorElement>['props']>) => {
+      const { href } = node;
+
+      if (href!.substr(0, 4) === 'http') {
+        return (
+          <a css={LinkStyle} href={href!} target="_blank" rel="noopener noreferrer">
+            {node.children}
+          </a>
+        );
+      }
+
+      return (
+        <Link css={LinkStyle} to={href!}>
+          {node.children}
+        </Link>
+      );
+    },
   },
 };
 
