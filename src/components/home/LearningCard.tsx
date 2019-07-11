@@ -10,7 +10,7 @@ const Heading = styled('h4')`
   font-size: ${typeScale.p.fontSize}px;
   line-height: ${typeScale.p.lineHeight}px;
   font-weight: 300;
-  color: ${colors.purple};
+  color: ${colors.blue};
   text-transform: uppercase;
 `;
 
@@ -50,10 +50,10 @@ const CTAButton = styled('span')`
   padding: 0 16px;
   height: 40px;
   color: ${colors.white};
-  background-color: ${colors.purple};
+  background-color: ${colors.blue};
   border: none;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
 
   .icon {
     margin-left: 8px;
@@ -72,6 +72,7 @@ const CardAnchor = styled('a')`
   color: ${colors.gray08};
   text-decoration: none;
   overflow: hidden;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
 
   &:hover,
   &:visited,
@@ -84,7 +85,8 @@ const CardAnchor = styled('a')`
   &:hover,
   &:focus {
     ${CTAButton} {
-      background-color: ${darken(0.2, colors.purple)};
+      color: ${colors.white};
+      background-color: ${darken(0.2, colors.blue)};
     }
   }
 `;

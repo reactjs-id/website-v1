@@ -8,7 +8,7 @@ import convert from 'htmr';
 import { HtmrOptions } from 'htmr/src/types';
 
 import { Link } from 'gatsby';
-import { typeScale, colors } from '../../styles/variables';
+import { typeScale, colors, breakpoints } from '../../styles/variables';
 
 const Root = styled('div')`
   grid-column: 3/4;
@@ -30,20 +30,35 @@ const H1 = styled('h1')`
 
 const h2 = styled('h2')`
   ${HeadingsBase}
-  font-size: ${typeScale.h2.fontSize}px;
-  line-height: ${typeScale.h2.lineHeight}px;
+  font-size: ${typeScale.h3.fontSize}px;
+  line-height: ${typeScale.h3.lineHeight}px;
+
+  @media (min-width: ${breakpoints.md}px) {
+    font-size: ${typeScale.h2.fontSize}px;
+    line-height: ${typeScale.h2.lineHeight}px;
+  }
 `;
 
 const h3 = styled('h3')`
   ${HeadingsBase}
-  font-size: ${typeScale.h3.fontSize}px;
-  line-height: ${typeScale.h3.lineHeight}px;
+  font-size: ${typeScale.h4.fontSize}px;
+  line-height: ${typeScale.h4.lineHeight}px;
+
+  @media (min-width: ${breakpoints.md}px) {
+    font-size: ${typeScale.h3.fontSize}px;
+    line-height: ${typeScale.h3.lineHeight}px;
+  }
 `;
 
 const h4 = styled('h4')`
   ${HeadingsBase}
-  font-size: ${typeScale.h4.fontSize}px;
-  line-height: ${typeScale.h4.lineHeight}px;
+  font-size: ${typeScale.h5.fontSize}px;
+  line-height: ${typeScale.h5.lineHeight}px;
+
+  @media (min-width: ${breakpoints.md}px) {
+    font-size: ${typeScale.h4.fontSize}px;
+    line-height: ${typeScale.h4.lineHeight}px;
+  }
 `;
 
 const h5 = styled('h5')`

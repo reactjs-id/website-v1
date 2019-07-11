@@ -12,6 +12,8 @@ export const colors = {
   gray08: '#111',
   black: '#000',
   purple: '#49318c',
+  blue: '#254763',
+  lightBlue: '#a8d8fc',
   orange: '#fb8d3e',
   brand: '#f87b6e',
 };

@@ -38,7 +38,11 @@ function IndexPage({ data }: IndexPageProps) {
           {siteMetadata.title} &middot; {siteMetadata.tagline}
         </title>
       </Helmet>
-      <HomepageSection heading="Selamat Datang" title="Komunitas Developer ReactJS Indonesia">
+      <HomepageSection
+        headingColor={colors.lightBlue}
+        heading="Selamat Datang"
+        title="Komunitas Developer ReactJS Indonesia"
+      >
         <Paragraph>
           ReactJS ID adalah komunitas para developer React dan React Native. Kami mengadakan ajang
           meetup setiap bulannya, dimana para developer React bertukar informasi mengenai React dan
@@ -51,9 +55,9 @@ function IndexPage({ data }: IndexPageProps) {
       <HomepageSection
         centered
         fullWidth
-        backgroundColor={colors.purple}
-        textColor={colors.white}
-        headingColor={colors.white}
+        backgroundColor={colors.lightBlue}
+        textColor={colors.gray08}
+        headingColor={colors.gray08}
         heading="Ingin Belajar React?"
         title="Materi Pembelajaran"
       >
