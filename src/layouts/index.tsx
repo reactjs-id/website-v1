@@ -55,7 +55,9 @@ const IndexLayout: React.FC<RouterProps> = ({ children, location }) => {
           <Hero isHomepage={location && location.pathname === '/'} />
           <LayoutMain>{children}</LayoutMain>
           <Footer />
-          <ScrollToContent isScrollVisible={isScrollVisible} />
+          {location && location.pathname === '/' && (
+            <ScrollToContent isScrollVisible={isScrollVisible} />
+          )}
         </LayoutRoot>
       )}
     />
