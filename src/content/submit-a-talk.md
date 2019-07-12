@@ -1,23 +1,23 @@
 ---
 layout: page
-title: 'Submit a Talk'
+title: 'Ajukan Topik'
 ---
 
-Got any talk ideas for the next meetup? Submit your proposals in the [GitHub repo](https://github.com/reactjs-id/meetup).
+Punya ide topik untuk pertemuan berikutnya? Ajukan topikmu melalui [repositori GitHub ini](https://github.com/reactjs-id/meetup).
 
-## Talk proposal process
+## Proses pengajuan topik
 
-We're following the system used by [JakartaJS](https://github.com/jakartajs/talks) of using GitHub. To propose your idea, [create an issue](https://github.com/reactjs-id/meetup/issues/new) following the template provided. We will then review your proposal, and if you're lucky, we will confirm a schedule with you for the next meetup.
+Kita mengikuti sistem yang digunakan oleh [JakartaJS](https://github.com/jakartajs/talks) yang memanfaatkan GitHub. Untuk mengajukan topikmu, silakan [buat _issue_ GitHub](https://github.com/reactjs-id/meetup/issues/new?assignees=%40reactjs-id%2Fmeetup&labels=talks&template=talk-proposal.md) mengikuti contoh yang telah disediakan. Selanjutnya kami akan mengulas pengajuan Anda, apabila topik Anda terpilih, kami akan menghubungi Anda untuk melakukan penjadwalan pertemuan berikutnya.
 
-We have two kinds of talks:
+Kita memiliki dua jenis topik pembahasan:
 
-- Lightning Talk (5-15min)
-- Full Talk (30-45min)
+- Pembahasan Singkat/_Lightning Talk_ (5-15 menit)
+- Pembahasan Utuh/_Full Talk_ (30-45 menit)
 
-Note that lightning talks are informal, so feel free to step up in the stage anytime we announce the start of a lightning talk session during our meetups.
+Perlu diperhatikan bahwa pembahasan singkat (_lightning talk_) ini bersifat informal, jadi tidak harus melalu proses pengajuan dan persetujuan terlebih dahulu. Di setiap pertemuannya, kami akan sediakan sesi khusus untuk ini, apabila sudah tiba waktunya, silakan ajukan diri secara langsung di tempat. 😉
 
-## Preparing for your talk
+## Mempersiapkan presentasi topik
 
-If this is your first time giving out a talk, you can learn some tips and tricks on giving a really good talk. [speaking.io](https://speaking.io/) is a good place to start.
+Jika ini pertama kalinya kamu menyajikan topikmu di depan umum, Anda dapat belajar beberapa tips dan trik dalam menyampaikan materi dengan baik. Anda dapat mulai mempelajarina dari [speaking.io].
 
-Note that in most venues we will only provide a handheld mic and not a lapel or headset mic, so practice presenting while holding a mic.
+Perhatikan bahwa hampir di setiap lokasi kami hanya menyediakan mikrofon tangan yang harus Anda pegang sendiri, bukan _headset_ atau semacamnya. Jadi berlatihlah menyajikan materi Anda sambil memegang mikrofon.

@@ -99,7 +99,7 @@ const TopNavigation: React.FC<TopNavigationProps> = ({ title }) => (
         <Link to="/community">Komunitas</Link>
       </MenuItem>
       <MenuItem>
-        <Link to="/submit-a-talk">Submit Talk</Link>
+        <Link to="/submit-a-talk">Ajukan Topik</Link>
       </MenuItem>
     </Inner>
   </Root>
