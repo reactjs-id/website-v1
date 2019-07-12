@@ -44,13 +44,16 @@ const IndexLayout: React.FC<RouterProps> = ({ children, location }) => {
       query={query}
       render={(data: StaticQueryProps) => (
         <LayoutRoot>
-          <Helmet
-            title={data.site.siteMetadata.title}
-            meta={[
-              { name: 'description', content: data.site.siteMetadata.description },
-              { name: 'keywords', content: data.site.siteMetadata.keywords },
-            ]}
-          />
+          <Helmet>
+            <title>{data.site.siteMetadata.title}</title>
+            <meta name="description" content={data.site.siteMetadata.description} />
+            <meta name="keywords" content={data.site.siteMetadata.keywords} />
+            <meta property="og:site_name" content={data.site.siteMetadata.title} />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content={data.site.siteMetadata.title} />
+            <meta property="og:description" content={data.site.siteMetadata.description} />
+            <meta name="twitter:dnt" content="on" />
+          </Helmet>
           <TopNavigation title={data.site.siteMetadata.title} />
           <Hero isHomepage={location && location.pathname === '/'} />
           <LayoutMain>{children}</LayoutMain>

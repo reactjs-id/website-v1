@@ -18,6 +18,6 @@ Perlu diperhatikan bahwa pembahasan singkat (_lightning talk_) ini bersifat info
 
 ## Mempersiapkan presentasi topik
 
-Jika ini pertama kalinya kamu menyajikan topikmu di depan umum, Anda dapat belajar beberapa tips dan trik dalam menyampaikan materi dengan baik. Anda dapat mulai mempelajarina dari [speaking.io].
+Jika ini pertama kalinya kamu menyajikan topikmu di depan umum, Anda dapat belajar beberapa tips dan trik dalam menyampaikan materi dengan baik. Anda dapat mulai mempelajarina dari [speaking.io](https://speaking.io).
 
 Perhatikan bahwa hampir di setiap lokasi kami hanya menyediakan mikrofon tangan yang harus Anda pegang sendiri, bukan _headset_ atau semacamnya. Jadi berlatihlah menyajikan materi Anda sambil memegang mikrofon.

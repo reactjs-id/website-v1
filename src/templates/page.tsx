@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
+import Helmet from 'react-helmet';
 
 import Page from '../components/layout/Page';
 import PageContent from '../components/layout/PageContent';
@@ -27,14 +28,19 @@ interface PageTemplateProps {
 }
 
 const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
-  const { frontmatter, html } = data.markdownRemark;
+  const { frontmatter, html, excerpt } = data.markdownRemark;
   const { siteMetadata } = data.site;
 
   return (
     <Page isArticle>
-      <title>
-        {frontmatter.title} &middot; {siteMetadata.title}
-      </title>
+      <Helmet>
+        <title>
+          {frontmatter.title} &middot; {siteMetadata.title}
+        </title>
+        <meta name="description" content={excerpt} />
+        <meta property="og:title" content={frontmatter.title} />
+        <meta property="og:description" content={excerpt} />
+      </Helmet>
       <PageContent title={frontmatter.title} html={html} />
     </Page>
   );
