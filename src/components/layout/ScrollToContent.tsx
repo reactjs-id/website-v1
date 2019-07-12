@@ -53,7 +53,7 @@ const Root = styled(ScrollLink)<TransitionProps>`
   text-decoration: none;
   background: none;
   background-color: ${colors.white};
-  box-shadow: 0 8px 16px 0 rgba (0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
   border: none;
   border-radius: 60px;
   transition: all ${duration}ms ease-in-out;

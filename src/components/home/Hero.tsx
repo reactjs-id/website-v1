@@ -1,12 +1,13 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { keyframes } from '@emotion/core';
+import { keyframes, css } from '@emotion/core';
 
 import { heights, widths, breakpoints, typeScale, colors } from '../../styles/variables';
 import Paragraph from '../ui/Paragraph';
-import pattern from '../../assets/images/shattered-dark.png';
 import CTAButton from '../ui/CTAButton';
 import ArrowRightIcon from '../ui/ArrowRightIcon';
+
+import patternImage from '../../assets/images/shattered-dark.png';
 
 const flicker = keyframes`
   0% {
@@ -20,6 +21,21 @@ const flicker = keyframes`
   }
 `;
 
+const pattern = css`
+  background-image: linear-gradient(to right bottom, #49318c, #8b348b, #bc4183, #e05978, #f87b6e);
+  background-size: 400% 400%;
+  animation: ${flicker} 15s ease infinite;
+  z-index: 0;
+
+  &::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: url(${patternImage});
+  }
+`;
+
 const Root = styled('header')`
   position: relative;
   display: grid;
@@ -29,18 +45,7 @@ const Root = styled('header')`
   min-height: calc(100vh - 60px);
   padding: 24px;
   padding-top: calc(${heights.header}px + 24px);
-  background-image: linear-gradient(to right bottom, #49318c, #8b348b, #bc4183, #e05978, #f87b6e);
-  background-size: 400% 400%;
-  animation: ${flicker} 15s ease infinite;
-  z-index: 0;
-
-  &::after {
-    position: absolute;
-    content: '';
-    height: 100%;
-    width: 100%;
-    background-image: url(${pattern});
-  }
+  ${pattern}
 `;
 
 const HeadbarRoot = styled('header')`
@@ -49,18 +54,8 @@ const HeadbarRoot = styled('header')`
   left: 0;
   width: 100%;
   height: calc(${heights.header}px + 104px);
-  background-image: linear-gradient(to right bottom, #49318c, #8b348b, #bc4183, #e05978, #f87b6e);
-  background-size: 400% 400%;
-  animation: ${flicker} 15s ease infinite;
-  z-index: 0;
 
-  &::after {
-    position: absolute;
-    content: '';
-    height: 100%;
-    width: 100%;
-    background-image: url(${pattern});
-  }
+  ${pattern}
 `;
 
 const Inner = styled('div')`
