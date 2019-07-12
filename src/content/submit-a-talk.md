@@ -11,8 +11,8 @@ Kita mengikuti sistem yang digunakan oleh [JakartaJS](https://github.com/jakarta
 
 Kita memiliki dua jenis topik pembahasan:
 
-- Pembahasan Singkat/_Lightning Talk_ (5-15 menit)
-- Pembahasan Utuh/_Full Talk_ (30-45 menit)
+- Pembahasan Singkat / _Lightning Talk_ (5-15 menit)
+- Pembahasan Utuh / _Full Talk_ (30-45 menit)
 
 Perlu diperhatikan bahwa pembahasan singkat (_lightning talk_) ini bersifat informal, jadi tidak harus melalu proses pengajuan dan persetujuan terlebih dahulu. Di setiap pertemuannya, kami akan sediakan sesi khusus untuk ini, apabila sudah tiba waktunya, silakan ajukan diri secara langsung di tempat. 😉
 
