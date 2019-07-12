@@ -141,8 +141,8 @@ function Hero({ isHomepage }: HeroProps) {
           <DateAndLocation>Qlue HQ - Jl. Pejaten Barat No.13, Jakarta Selatan</DateAndLocation>
           <Paragraph>
             Setelah tidur panjang selama beberapa saat, mari kita hidupkan kembali komunitas React
-            Indonesia! Seluruh topik di meetup ini beginner-friendly, namun tetap menarik bagi
-            mereka yang sudah berpengalaman di React.
+            Indonesia! Seluruh topik di meetup ini ramah bagi pemula, namun tetap menarik bagi yang
+            sudah berpengalaman sekalipun.
           </Paragraph>
           <CTAButton
             light
