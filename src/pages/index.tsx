@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
-import { colors, breakpoints, widths } from '../styles/variables';
+import { colors, widths } from '../styles/variables';
 import { SiteMetadata } from '../interfaces/gatsby';
 
 import LearningCard from '../components/home/LearningCard';

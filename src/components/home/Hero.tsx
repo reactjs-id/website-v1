@@ -140,8 +140,9 @@ function Hero({ isHomepage }: HeroProps) {
           <DateAndLocation>Selasa, 16 Juli 2019 - 19:00</DateAndLocation>
           <DateAndLocation>Qlue HQ - Jl. Pejaten Barat No.13, Jakarta Selatan</DateAndLocation>
           <Paragraph>
-            After a few dormant years, let&apos;s resurrect React Indonesia community! All topics
-            will be both friendly for beginners and fun for experienced coders.
+            Setelah tidur panjang selama beberapa saat, mari kita hidupkan kembali komunitas React
+            Indonesia! Seluruh topik di meetup ini beginner-friendly, namun tetap menarik bagi
+            mereka yang sudah berpengalaman di React.
           </Paragraph>
           <CTAButton
             light
