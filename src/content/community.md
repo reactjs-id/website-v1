@@ -16,3 +16,9 @@ Bergabung dengan Meetup group ReactJS ID untuk mendapatkan update mengenai ajang
 Grup Telegram ReactJS Indonesia adalah tempat dimana Anda bisa langsung bertanya kepada pakar ReactJS dari Indonesia. Anda juga akan mendapatkan berita-berita terkini mengenai ekosistem React, lowongan kerja, dan update mengenai ajang meetup setiap bulannya.
 
 [t.me/react_id](https://t.me/react_id)
+
+## Facebook
+
+Bergabung lah dengan Grup Facebook ReactJS Indonesia, Anda bisa mendapatkan info-info terkini mengenai perkembangan ReactJS sendiri, lowongan pekerjaan dan masih banyak yang lainnya
+
+[ReactJS Indonesia](https://www.facebook.com/groups/442974152553174/)
