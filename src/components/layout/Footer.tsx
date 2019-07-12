@@ -41,7 +41,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => (
         <Paragraph>
           Kode sumber situs ini tersedia di{' '}
           <a
-            href="https://github.com/reactjs-id/react.id"
+            href="https://github.com/reactjs-id/reactjs.id"
             target="_blank"
             rel="noopener noreferrer"
           >
