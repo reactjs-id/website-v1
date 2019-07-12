@@ -12,6 +12,8 @@ import TopNavigation from '../components/layout/TopNavigation';
 import Hero from '../components/home/Hero';
 import LayoutMain from '../components/layout/LayoutMain';
 import Footer from '../components/layout/Footer';
+import useVerticalScroll from '../utils/useVerticalScroll';
+import ScrollToContent from '../components/layout/ScrollToContent';
 
 interface StaticQueryProps {
   site: {
@@ -34,25 +36,30 @@ const query = graphql`
   }
 `;
 
-const IndexLayout: React.FC<RouterProps> = ({ children, location }) => (
-  <StaticQuery
-    query={query}
-    render={(data: StaticQueryProps) => (
-      <LayoutRoot>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: data.site.siteMetadata.description },
-            { name: 'keywords', content: data.site.siteMetadata.keywords },
-          ]}
-        />
-        <TopNavigation title={data.site.siteMetadata.title} />
-        <Hero isHomepage={location && location.pathname === '/'} />
-        <LayoutMain>{children}</LayoutMain>
-        <Footer />
-      </LayoutRoot>
-    )}
-  />
-);
+const IndexLayout: React.FC<RouterProps> = ({ children, location }) => {
+  const isScrollVisible = useVerticalScroll(0, 299);
+
+  return (
+    <StaticQuery
+      query={query}
+      render={(data: StaticQueryProps) => (
+        <LayoutRoot>
+          <Helmet
+            title={data.site.siteMetadata.title}
+            meta={[
+              { name: 'description', content: data.site.siteMetadata.description },
+              { name: 'keywords', content: data.site.siteMetadata.keywords },
+            ]}
+          />
+          <TopNavigation title={data.site.siteMetadata.title} />
+          <Hero isHomepage={location && location.pathname === '/'} />
+          <LayoutMain>{children}</LayoutMain>
+          <Footer />
+          <ScrollToContent isScrollVisible={isScrollVisible} />
+        </LayoutRoot>
+      )}
+    />
+  );
+};
 
 export default IndexLayout;

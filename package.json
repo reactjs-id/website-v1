@@ -58,6 +58,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-scroll": "^1.7.12",
+    "react-transition-group": "^4.2.1",
     "typescript": "^3.5.3"
   },
   "devDependencies": {
@@ -66,6 +68,8 @@
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
     "@types/react-helmet": "^5.0.8",
+    "@types/react-scroll": "^1.5.4",
+    "@types/react-transition-group": "^2.9.2",
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
     "eslint": "^5.16.0",

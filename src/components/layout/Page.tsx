@@ -1,8 +1,9 @@
 import * as React from 'react';
+import { Element } from 'react-scroll';
 import styled from '@emotion/styled';
 import { widths, heights } from '../../styles/variables';
 
-const Article = styled('article')`
+const Article = styled(Element)`
   position: relative;
   display: grid;
   flex: 1;
@@ -10,7 +11,7 @@ const Article = styled('article')`
   margin-top: ${heights.header}px;
 `;
 
-const Div = styled('div')`
+const Div = styled(Element)`
   display: block;
   flex: 1;
   position: relative;
@@ -23,10 +24,18 @@ interface PageProps {
 
 const Page: React.FC<PageProps> = ({ children, isArticle, className }) => {
   if (isArticle) {
-    return <Article className={className}>{children}</Article>;
+    return (
+      <Article name="content" as="article" className={className}>
+        {children}
+      </Article>
+    );
   }
 
-  return <Div className={className}>{children}</Div>;
+  return (
+    <Div name="content" as="div" className={className}>
+      {children}
+    </Div>
+  );
 };
 
 Page.defaultProps = {
