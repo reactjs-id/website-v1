@@ -28,9 +28,13 @@ interface PageTemplateProps {
 
 const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark;
+  const { siteMetadata } = data.site;
 
   return (
     <Page isArticle>
+      <title>
+        {frontmatter.title} &middot; {siteMetadata.title}
+      </title>
       <PageContent title={frontmatter.title} html={html} />
     </Page>
   );
