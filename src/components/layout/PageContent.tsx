@@ -8,6 +8,7 @@ import convert from 'htmr';
 import { HtmrOptions } from 'htmr/src/types';
 
 import { Link } from 'gatsby';
+import { transparentize } from 'polished';
 import { typeScale, colors, breakpoints } from '../../styles/variables';
 
 const Root = styled('div')`
@@ -98,12 +99,16 @@ const li = styled('li')`
 `;
 
 const LinkStyle = css`
-  color: ${colors.blue};
+  background-color: ${transparentize(0.5, colors.lightBlue)};
+  border-bottom: 1px solid ${transparentize(0.8, colors.gray08)};
+  color: ${colors.gray08};
   text-decoration: none;
 
   &:hover,
   &:focus {
-    text-decoration: underline;
+    background-color: ${transparentize(0.2, colors.lightBlue)};
+    border-bottom: 1px solid ${colors.gray08};
+    text-decoration: none;
   }
 `;
 

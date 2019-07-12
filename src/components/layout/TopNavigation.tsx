@@ -96,10 +96,10 @@ const TopNavigation: React.FC<TopNavigationProps> = ({ title }) => (
         </HomepageLink>
       </Brand>
       <MenuItem>
-        <a href="https://www.meetup.com/reactindonesia/">Meetup</a>
+        <Link to="/community">Komunitas</Link>
       </MenuItem>
       <MenuItem>
-        <Link to="/submit-a-talk">Submit a Talk</Link>
+        <Link to="/submit-a-talk">Submit Talk</Link>
       </MenuItem>
     </Inner>
   </Root>
