@@ -19,6 +19,6 @@ Grup Telegram ReactJS Indonesia adalah tempat dimana Anda bisa langsung bertanya
 
 ## Facebook
 
-Bergabung lah dengan Grup Facebook ReactJS Indonesia, Anda bisa mendapatkan info-info terkini mengenai perkembangan ReactJS sendiri, lowongan pekerjaan dan masih banyak yang lainnya
+Bergabunglah dengan grup Facebook ReactJS Indonesia, Anda bisa mendapatkan informasi terkini mengenai perkembangan ReactJS, lowongan pekerjaan terkait, dan masih banyak lagi informasi bermanfaat lainnya.
 
 [ReactJS Indonesia](https://www.facebook.com/groups/442974152553174/)
