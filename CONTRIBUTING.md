@@ -7,9 +7,9 @@ Pull Requests welcome! We welcome contributions for bugs, as well as additional 
 The simple steps of contributing to any GitHub project are as follows:
 
 1. [Fork the repository](https://github.com/reactjs-id/reactjs.id/fork)
-2. Create your feature branch: `git checkout -b my-new-feature`
+2. Create your feature branch: `git checkout -b username/my-new-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push -u origin my-new-feature`
+4. Push to the branch: `git push -u origin username/my-new-feature`
 5. Create a [Pull Request](https://github.com/reactjs-id/reactjs.id/pulls)
 
 ## Developing
