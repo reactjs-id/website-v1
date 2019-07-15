@@ -113,6 +113,17 @@ function IndexPage({ data }: IndexPageProps) {
               menggunakan React untuk berbagai macam use-case.
             </Paragraph>
           </LearningCard>
+          <LearningCard
+            heading="BAHASA INDONESIA"
+            title="Materi Bimbingan Penggunaan React"
+            href="https://github.com/arisetyo/belajar-react"
+          >
+            <Paragraph>
+              Penjelasan detail mengenai penggunaan React mulai dari konsep dasar, disertai contoh
+              kode dan penjelasan. Tiap materi dibagi menjadi beberapa bagian sehingga lebih mudah
+              untuk diikuti satu per satu.
+            </Paragraph>
+          </LearningCard>
         </LearningCardGrid>
       </HomepageSection>
     </Page>
