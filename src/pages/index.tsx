@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
 import { colors, widths } from '../styles/variables';
-import { SiteMetadata } from '../interfaces/gatsby';
+import { SiteMetadata, Edge, LeaningMaterial, GatsbyContentNode } from '../interfaces/gatsby';
 
 import LearningCard from '../components/home/LearningCard';
 import HomepageSection from '../components/home/HomepageSection';
@@ -25,11 +25,12 @@ interface IndexPageProps {
     site: {
       siteMetadata: SiteMetadata;
     };
+    learning: Edge<GatsbyContentNode<LeaningMaterial>>;
   };
 }
 
 function IndexPage({ data }: IndexPageProps) {
-  const { site } = data;
+  const { site, learning } = data;
   const { siteMetadata } = site;
 
   return (
@@ -73,57 +74,11 @@ function IndexPage({ data }: IndexPageProps) {
           baru saja memulai. Cobalah memulai dari salah satu materi di bawah.
         </Paragraph>
         <LearningCardGrid>
-          <LearningCard
-            heading="Bahasa Inggris"
-            title="Dokumentasi React"
-            href="https://reactjs.org"
-          >
-            <Paragraph>
-              Dokumentasi React merupakan sumber daya React terlengkap. Anda dapat menemukan
-              segalanya, mulai dari referensi API, tutorial praktis cara mengaplikasikan React pada
-              sebuah aplikasi, hingga update terbaru mengenai React.
-            </Paragraph>
-          </LearningCard>
-          <LearningCard
-            heading="Bahasa Indonesia"
-            title="Dokumentasi React (ID)"
-            href="https://id.reactjs.org"
-          >
-            <Paragraph>
-              Dokumentasi React juga tersedia dalam Bahasa Indonesia. Anda juga dapat berkontribusi
-              menerjemahkan dokumentasi React melalui{' '}
-              <a
-                href="https://github.com/reactjs/id.reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                tautan berikut
-              </a>
-              .
-            </Paragraph>
-          </LearningCard>
-          <LearningCard
-            heading="Kursus Video"
-            title="The Beginner's Guide to React"
-            href="https://egghead.io/courses/the-beginner-s-guide-to-react"
-          >
-            <Paragraph>
-              Kursus video gratis dari Egghead ini dibawakan oleh Kent C. Dodds. Anda akan belajar
-              cara kerja React secara internal, apa itu JSX dan bagaimana cara kerjanya, serta cara
-              menggunakan React untuk berbagai macam use-case.
-            </Paragraph>
-          </LearningCard>
-          <LearningCard
-            heading="BAHASA INDONESIA"
-            title="Materi Bimbingan Penggunaan React"
-            href="https://github.com/arisetyo/belajar-react"
-          >
-            <Paragraph>
-              Penjelasan detail mengenai penggunaan React mulai dari konsep dasar, disertai contoh
-              kode dan penjelasan. Tiap materi dibagi menjadi beberapa bagian sehingga lebih mudah
-              untuk diikuti satu per satu.
-            </Paragraph>
-          </LearningCard>
+          {learning.edges.map(({ node }) => (
+            <LearningCard key={node.id} heading={node.type} title={node.title} href={node.url}>
+              <Paragraph>{node.description}</Paragraph>
+            </LearningCard>
+          ))}
         </LearningCardGrid>
       </HomepageSection>
     </Page>
@@ -139,6 +94,17 @@ export const query = graphql`
         title
         tagline
         description
+      }
+    }
+    learning: allLearningJson {
+      edges {
+        node {
+          id
+          type
+          title
+          description
+          url
+        }
       }
     }
   }

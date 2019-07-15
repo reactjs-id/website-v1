@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Bahasa Inggris",
+    "title": "Dokumentasi React",
+    "description": "Dokumentasi React merupakan sumber daya React terlengkap. Anda dapat menemukan segalanya, mulai dari referensi API, tutorial praktis cara mengaplikasikan React pada sebuah aplikasi, hingga update terbaru mengenai React.",
+    "url": "https://reactjs.org"
+  },
+  {
+    "type": "Bahasa Indonesia",
+    "title": "Dokumentasi React (ID)",
+    "description": "Dokumentasi React juga tersedia dalam Bahasa Indonesia. Anda juga dapat berkontribusi menerjemahkan dokumentasi React melalui GitHub reactjs/id.reactjs.org.",
+    "url": "https://id.reactjs.org"
+  },
+  {
+    "type": "Bahasa Inggris",
+    "title": "The Beginner's Guide to React",
+    "description": "Kursus video gratis dari Egghead ini dibawakan oleh Kent C. Dodds. Anda akan belajar cara kerja React secara internal, apa itu JSX dan bagaimana cara kerjanya, serta cara menggunakan React untuk berbagai macam use-case.",
+    "url": "https://egghead.io/courses/the-beginner-s-guide-to-react"
+  },
+  {
+    "type": "Bahasa Indonesia",
+    "title": "Materi Bimbingan Penggunaan React",
+    "description": "Penjelasan detail mengenai penggunaan React mulai dari konsep dasar, disertai contoh kode dan penjelasan. Tiap materi dibagi menjadi beberapa bagian sehingga lebih mudah untuk diikuti satu per satu.",
+    "url": "https://github.com/arisetyo/belajar-react"
+  }
+]
