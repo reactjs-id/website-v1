@@ -9,8 +9,6 @@ import '../styles/normalize';
 
 import LayoutRoot from '../components/layout/LayoutRoot';
 import TopNavigation from '../components/layout/TopNavigation';
-import Hero from '../components/home/Hero';
-import LayoutMain from '../components/layout/LayoutMain';
 import Footer from '../components/layout/Footer';
 import useVerticalScroll from '../utils/useVerticalScroll';
 import ScrollToContent from '../components/layout/ScrollToContent';
@@ -55,8 +53,7 @@ const IndexLayout: React.FC<RouterProps> = ({ children, location }) => {
             <meta name="twitter:dnt" content="on" />
           </Helmet>
           <TopNavigation title={data.site.siteMetadata.title} />
-          <Hero isHomepage={location && location.pathname === '/'} />
-          <LayoutMain>{children}</LayoutMain>
+          {children}
           <Footer />
           {location && location.pathname === '/' && (
             <ScrollToContent isScrollVisible={isScrollVisible} />

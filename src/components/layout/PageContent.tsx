@@ -166,9 +166,11 @@ const options: Partial<HtmrOptions> = {
 const PageContent: React.FC<PageProps> = ({ title, html, className }) => {
   return (
     <Root className={className}>
-      <Title>
-        <H1>{title}</H1>
-      </Title>
+      {title && (
+        <Title>
+          <H1>{title}</H1>
+        </Title>
+      )}
       <Content>{convert(html, options)}</Content>
     </Root>
   );

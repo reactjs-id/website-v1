@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 
 import Page from '../components/layout/Page';
 import PageContent from '../components/layout/PageContent';
+import LayoutMain from '../components/layout/LayoutMain';
 
 interface PageTemplateProps {
   data: {
@@ -35,17 +36,19 @@ const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
   const { siteMetadata } = data.site;
 
   return (
-    <Page isArticle>
-      <Helmet>
-        <title>
-          {frontmatter.title} &middot; {siteMetadata.title}
-        </title>
-        <meta name="description" content={fields.description || excerpt} />
-        <meta property="og:title" content={frontmatter.title} />
-        <meta property="og:description" content={fields.description || excerpt} />
-      </Helmet>
-      <PageContent title={frontmatter.title} html={html} />
-    </Page>
+    <LayoutMain title={frontmatter.title}>
+      <Page isArticle>
+        <Helmet>
+          <title>
+            {frontmatter.title} &middot; {siteMetadata.title}
+          </title>
+          <meta name="description" content={fields.description || excerpt} />
+          <meta property="og:title" content={frontmatter.title} />
+          <meta property="og:description" content={fields.description || excerpt} />
+        </Helmet>
+        <PageContent html={html} />
+      </Page>
+    </LayoutMain>
   );
 };
 

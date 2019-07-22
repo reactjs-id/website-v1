@@ -1,6 +1,8 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 
+import Hero from './Hero';
+
 const StyledLayoutMain = styled('main')`
   display: flex;
   flex-direction: column;
@@ -9,10 +11,15 @@ const StyledLayoutMain = styled('main')`
 
 interface LayoutMainProps {
   className?: string;
+  isHomepage?: boolean;
+  title?: string;
 }
 
-const LayoutMain: React.FC<LayoutMainProps> = ({ children, className }) => (
-  <StyledLayoutMain className={className}>{children}</StyledLayoutMain>
+const LayoutMain: React.FC<LayoutMainProps> = ({ children, className, title, isHomepage }) => (
+  <>
+    <Hero title={title} isHomepage={isHomepage} />
+    <StyledLayoutMain className={className}>{children}</StyledLayoutMain>
+  </>
 );
 
 export default LayoutMain;
