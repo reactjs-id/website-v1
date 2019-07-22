@@ -29,6 +29,7 @@ const query = graphql`
       siteMetadata {
         title
         description
+        keywords
       }
     }
   }
