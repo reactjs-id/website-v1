@@ -1,14 +1,14 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import { Link, graphql } from 'gatsby';
-import { typeScale, heights } from '../styles/variables';
+import { typeScale } from '../styles/variables';
+import LayoutMain from '../components/layout/LayoutMain';
 
 const NotFoundWrapper = styled('section')`
   display: flex;
   flex: 1 1 auto;
   align-items: center;
   justify-content: center;
-  margin-top: calc(${heights.header}px + 104px);
 `;
 
 const Inner = styled('div')`
@@ -31,14 +31,16 @@ const Inner = styled('div')`
 `;
 
 const NotFoundPage = () => (
-  <NotFoundWrapper>
-    <Inner>
-      <h1>404: Page not found.</h1>
-      <p>
-        Halaman yang Anda cari tidak ditemukan. <Link to="/">Kembali?</Link>
-      </p>
-    </Inner>
-  </NotFoundWrapper>
+  <LayoutMain>
+    <NotFoundWrapper>
+      <Inner>
+        <h1>404: Page not found.</h1>
+        <p>
+          Halaman yang Anda cari tidak ditemukan. <Link to="/">Kembali?</Link>
+        </p>
+      </Inner>
+    </NotFoundWrapper>
+  </LayoutMain>
 );
 
 export default NotFoundPage;

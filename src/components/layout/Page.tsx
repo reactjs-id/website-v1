@@ -3,12 +3,15 @@ import { Element } from 'react-scroll';
 import styled from '@emotion/styled';
 import { widths, heights } from '../../styles/variables';
 
-const Article = styled(Element)`
+const Article = styled('article')`
   position: relative;
   display: grid;
   flex: 1;
   grid-template-columns: 1fr 1fr minmax(auto, ${widths.md}px) 1fr 1fr;
-  margin-top: ${heights.header}px;
+
+  &:not(:first-child) {
+    margin-top: ${heights.header}px;
+  }
 `;
 
 const Div = styled(Element)`
@@ -24,15 +27,11 @@ interface PageProps {
 
 const Page: React.FC<PageProps> = ({ children, isArticle, className }) => {
   if (isArticle) {
-    return (
-      <Article name="content" as="article" className={className}>
-        {children}
-      </Article>
-    );
+    return <Article className={className}>{children}</Article>;
   }
 
   return (
-    <Div name="content" as="div" className={className}>
+    <Div name="content" className={className}>
       {children}
     </Div>
   );
