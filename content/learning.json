@@ -1,26 +1,35 @@
 [
   {
-    "type": "Bahasa Inggris",
+    "type": "Dokumentasi",
     "title": "Dokumentasi React",
     "description": "Dokumentasi React merupakan sumber daya React terlengkap. Anda dapat menemukan segalanya, mulai dari referensi API, tutorial praktis cara mengaplikasikan React pada sebuah aplikasi, hingga update terbaru mengenai React.",
-    "url": "https://reactjs.org"
+    "url": "https://reactjs.org",
+    "featured": true
   },
   {
-    "type": "Bahasa Indonesia",
+    "type": "Dokumentasi",
     "title": "Dokumentasi React (ID)",
     "description": "Dokumentasi React juga tersedia dalam Bahasa Indonesia. Anda juga dapat berkontribusi menerjemahkan dokumentasi React melalui GitHub reactjs/id.reactjs.org.",
     "url": "https://id.reactjs.org"
   },
   {
-    "type": "Bahasa Inggris",
+    "type": "Kursus Video",
     "title": "The Beginner's Guide to React",
     "description": "Kursus video gratis dari Egghead ini dibawakan oleh Kent C. Dodds. Anda akan belajar cara kerja React secara internal, apa itu JSX dan bagaimana cara kerjanya, serta cara menggunakan React untuk berbagai macam use-case.",
     "url": "https://egghead.io/courses/the-beginner-s-guide-to-react"
   },
   {
-    "type": "Bahasa Indonesia",
+    "type": "Modul Pembelajaran",
     "title": "Materi Bimbingan Penggunaan React",
     "description": "Penjelasan detail mengenai penggunaan React mulai dari konsep dasar, disertai contoh kode dan penjelasan. Tiap materi dibagi menjadi beberapa bagian sehingga lebih mudah untuk diikuti satu per satu.",
-    "url": "https://github.com/arisetyo/belajar-react"
+    "url": "https://github.com/arisetyo/belajar-react",
+    "featured": true
+  },
+  {
+    "type": "Kursus Video",
+    "title": "Belajar ReactJS Untuk Pemula",
+    "description": "Kursus video lengkap dalam bahasa Indonesia untuk mempelajari React, mulai dari pengenalan konsep-konsep dasar hingga men-deploy aplikasi React Anda di berbagai macam provider hosting.",
+    "url": "https://sekolahkoding.com/kelas/belajar-reactjs-untuk-pemula",
+    "featured": true
   }
 ]
