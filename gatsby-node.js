@@ -13,7 +13,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   switch (node.internal.type) {
     case 'MarkdownRemark': {
-      const { permalink, layout } = node.frontmatter;
+      const { permalink, layout, description } = node.frontmatter;
       const { relativePath } = getNode(node.parent);
 
       let slug = permalink;
@@ -34,6 +34,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         node,
         name: 'layout',
         value: layout || '',
+      });
+
+      // Used for OpenGraph description
+      createNodeField({
+        node,
+        name: 'description',
+        value: description || '',
       });
       break;
     }
