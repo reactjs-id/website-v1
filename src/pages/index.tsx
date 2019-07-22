@@ -12,6 +12,7 @@ import Paragraph from '../components/ui/Paragraph';
 import CTAButton from '../components/ui/CTAButton';
 import Page from '../components/layout/Page';
 import ArrowRightIcon from '../components/ui/ArrowRightIcon';
+import LayoutMain from '../components/layout/LayoutMain';
 
 const LearningCardGrid = styled('div')`
   display: grid;
@@ -34,54 +35,56 @@ function IndexPage({ data }: IndexPageProps) {
   const { siteMetadata } = site;
 
   return (
-    <Page>
-      <Helmet>
-        <title>
-          {siteMetadata.title} &middot; {siteMetadata.tagline}
-        </title>
-      </Helmet>
-      <HomepageSection
-        headingColor={colors.lightBlue}
-        heading="Selamat Datang"
-        title="Komunitas Developer ReactJS Indonesia"
-      >
-        <Paragraph>
-          ReactJS ID adalah komunitas para developer React dan React Native. Kami mengadakan ajang
-          meetup setiap bulannya, dimana para developer React bertukar informasi mengenai React dan
-          ekosistemnya.
-        </Paragraph>
-        <CTAButton
-          light
-          inline
-          icon={<ArrowRightIcon />}
-          href="https://www.meetup.com/reactindonesia/"
+    <LayoutMain isHomepage>
+      <Page>
+        <Helmet>
+          <title>
+            {siteMetadata.title} &middot; {siteMetadata.tagline}
+          </title>
+        </Helmet>
+        <HomepageSection
+          headingColor={colors.lightBlue}
+          heading="Selamat Datang"
+          title="Komunitas Developer ReactJS Indonesia"
         >
-          Bergabung
-        </CTAButton>
-      </HomepageSection>
-      <HomepageSection
-        centered
-        fullWidth
-        backgroundColor={colors.lightBlue}
-        textColor={colors.gray08}
-        headingColor={colors.gray08}
-        heading="Ingin Belajar React?"
-        title="Materi Pembelajaran"
-      >
-        <Paragraph>
-          Beberapa konsep React memang terlihat janggal, tapi diluar itu React sangat mudah untuk
-          dipelajari dan dipahami, baik mereka yang sudah mahir dalam JavaScript modern ataupun yang
-          baru saja memulai. Cobalah memulai dari salah satu materi di bawah.
-        </Paragraph>
-        <LearningCardGrid>
-          {learning.edges.map(({ node }) => (
-            <LearningCard key={node.id} heading={node.type} title={node.title} href={node.url}>
-              <Paragraph>{node.description}</Paragraph>
-            </LearningCard>
-          ))}
-        </LearningCardGrid>
-      </HomepageSection>
-    </Page>
+          <Paragraph>
+            ReactJS ID adalah komunitas para developer React dan React Native. Kami mengadakan ajang
+            meetup setiap bulannya, dimana para developer React bertukar informasi mengenai React
+            dan ekosistemnya.
+          </Paragraph>
+          <CTAButton
+            light
+            inline
+            icon={<ArrowRightIcon />}
+            href="https://www.meetup.com/reactindonesia/"
+          >
+            Bergabung
+          </CTAButton>
+        </HomepageSection>
+        <HomepageSection
+          centered
+          fullWidth
+          backgroundColor={colors.lightBlue}
+          textColor={colors.gray08}
+          headingColor={colors.gray08}
+          heading="Ingin Belajar React?"
+          title="Materi Pembelajaran"
+        >
+          <Paragraph>
+            Beberapa konsep React memang terlihat janggal, tapi diluar itu React sangat mudah untuk
+            dipelajari dan dipahami, baik mereka yang sudah mahir dalam JavaScript modern ataupun
+            yang baru saja memulai. Cobalah memulai dari salah satu materi di bawah.
+          </Paragraph>
+          <LearningCardGrid>
+            {learning.edges.map(({ node }) => (
+              <LearningCard key={node.id} heading={node.type} title={node.title} href={node.url}>
+                <Paragraph>{node.description}</Paragraph>
+              </LearningCard>
+            ))}
+          </LearningCardGrid>
+        </HomepageSection>
+      </Page>
+    </LayoutMain>
   );
 }
 

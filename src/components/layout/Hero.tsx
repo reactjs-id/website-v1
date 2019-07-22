@@ -8,6 +8,7 @@ import CTAButton from '../ui/CTAButton';
 import ArrowRightIcon from '../ui/ArrowRightIcon';
 
 import patternImage from '../../assets/images/shattered-dark.png';
+import Headbar from './Headbar';
 
 const flicker = keyframes`
   0% {
@@ -21,7 +22,7 @@ const flicker = keyframes`
   }
 `;
 
-const pattern = css`
+export const pattern = css`
   background-image: linear-gradient(to right bottom, #49318c, #8b348b, #bc4183, #e05978, #f87b6e);
   background-size: 400% 400%;
   animation: ${flicker} 15s ease infinite;
@@ -30,9 +31,12 @@ const pattern = css`
   &::after {
     position: absolute;
     content: '';
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     background-image: url(${patternImage});
+    z-index: 1;
   }
 `;
 
@@ -48,21 +52,12 @@ const Root = styled('header')`
   ${pattern}
 `;
 
-const HeadbarRoot = styled('header')`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(${heights.header}px + 104px);
-
-  ${pattern}
-`;
-
 const Inner = styled('div')`
   display: flex;
   align-items: center;
+  position: relative;
   grid-column: 3/4;
-  z-index: 1;
+  z-index: 2;
 `;
 
 const SectionContent = styled('div')`
@@ -119,11 +114,12 @@ const DateAndLocation = styled('h4')`
 
 interface HeroProps {
   isHomepage?: boolean;
+  title?: string;
 }
 
-function Hero({ isHomepage }: HeroProps) {
+function Hero({ isHomepage, title }: HeroProps) {
   if (!isHomepage) {
-    return <HeadbarRoot />;
+    return <Headbar title={title} />;
   }
 
   return (
