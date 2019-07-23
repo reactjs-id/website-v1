@@ -21,7 +21,7 @@ const pattern = css`
   background-image: linear-gradient(to right bottom, #49318c, #8b348b, #bc4183, #e05978, #f87b6e);
   background-size: 400% 400%;
   animation: ${flicker} 15s ease infinite;
-  z-index: 0;
+  z-index: 1;
 
   &::after {
     position: absolute;

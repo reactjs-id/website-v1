@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 
 import Page from '../components/layout/Page';
 import PageContent from '../components/layout/PageContent';
-import LayoutMain from '../components/layout/LayoutMain';
+import PageWrapper from '../components/layout/PageWrapper';
 
 interface PageTemplateProps {
   data: {
@@ -36,7 +36,7 @@ const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
   const { siteMetadata } = data.site;
 
   return (
-    <LayoutMain title={frontmatter.title}>
+    <PageWrapper title={frontmatter.title}>
       <Page isArticle>
         <Helmet>
           <title>
@@ -48,7 +48,7 @@ const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
         </Helmet>
         <PageContent html={html} />
       </Page>
-    </LayoutMain>
+    </PageWrapper>
   );
 };
 

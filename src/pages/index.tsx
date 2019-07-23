@@ -12,7 +12,7 @@ import Paragraph from '../components/ui/Paragraph';
 import CTAButton from '../components/ui/CTAButton';
 import Page from '../components/layout/Page';
 import ArrowRightIcon from '../components/ui/ArrowRightIcon';
-import LayoutMain from '../components/layout/LayoutMain';
+import PageWrapper from '../components/layout/PageWrapper';
 
 const LearningCardGrid = styled('div')`
   display: grid;
@@ -35,7 +35,7 @@ function IndexPage({ data }: IndexPageProps) {
   const { siteMetadata } = site;
 
   return (
-    <LayoutMain isHomepage>
+    <PageWrapper isHomepage>
       <Page>
         <Helmet>
           <title>
@@ -84,7 +84,7 @@ function IndexPage({ data }: IndexPageProps) {
           </LearningCardGrid>
         </HomepageSection>
       </Page>
-    </LayoutMain>
+    </PageWrapper>
   );
 }
 

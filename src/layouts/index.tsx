@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
+import styled from '@emotion/styled';
 import { StaticQuery, graphql } from 'gatsby';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { RouterProps } from '@reach/router';
@@ -12,6 +13,18 @@ import TopNavigation from '../components/layout/TopNavigation';
 import Footer from '../components/layout/Footer';
 import useVerticalScroll from '../utils/useVerticalScroll';
 import ScrollToContent from '../components/layout/ScrollToContent';
+import LayoutMain from '../components/layout/LayoutMain';
+import { heights, colors } from '../styles/variables';
+
+const TopNavigationShellFallback = styled('div')`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: ${heights.header}px;
+  background-color: ${colors.gray08};
+  z-index: 0;
+`;
 
 interface StaticQueryProps {
   site: {
@@ -54,7 +67,8 @@ const IndexLayout: React.FC<RouterProps> = ({ children, location }) => {
             <meta name="twitter:dnt" content="on" />
           </Helmet>
           <TopNavigation title={data.site.siteMetadata.title} />
-          {children}
+          <TopNavigationShellFallback />
+          <LayoutMain>{children}</LayoutMain>
           <Footer />
           {location && location.pathname === '/' && (
             <ScrollToContent isScrollVisible={isScrollVisible} />

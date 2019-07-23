@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { Link, graphql } from 'gatsby';
 import { typeScale } from '../styles/variables';
-import LayoutMain from '../components/layout/LayoutMain';
+import PageWrapper from '../components/layout/PageWrapper';
 
 const NotFoundWrapper = styled('section')`
   display: flex;
@@ -31,7 +31,7 @@ const Inner = styled('div')`
 `;
 
 const NotFoundPage = () => (
-  <LayoutMain>
+  <PageWrapper>
     <NotFoundWrapper>
       <Inner>
         <h1>404: Page not found.</h1>
@@ -40,7 +40,7 @@ const NotFoundPage = () => (
         </p>
       </Inner>
     </NotFoundWrapper>
-  </LayoutMain>
+  </PageWrapper>
 );
 
 export default NotFoundPage;
