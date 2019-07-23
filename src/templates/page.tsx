@@ -24,12 +24,15 @@ interface PageTemplateProps {
       frontmatter: {
         title: string;
       };
+      fields: {
+        description: string;
+      };
     };
   };
 }
 
 const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
-  const { frontmatter, html, excerpt } = data.markdownRemark;
+  const { frontmatter, html, excerpt, fields } = data.markdownRemark;
   const { siteMetadata } = data.site;
 
   return (
@@ -39,9 +42,9 @@ const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
           <title>
             {frontmatter.title} &middot; {siteMetadata.title}
           </title>
-          <meta name="description" content={excerpt} />
+          <meta name="description" content={fields.description || excerpt} />
           <meta property="og:title" content={frontmatter.title} />
-          <meta property="og:description" content={excerpt} />
+          <meta property="og:description" content={fields.description || excerpt} />
         </Helmet>
         <PageContent html={html} />
       </Page>
@@ -68,6 +71,9 @@ export const query = graphql`
       excerpt
       frontmatter {
         title
+      }
+      fields {
+        description
       }
     }
   }

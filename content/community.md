@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 'Komunitas'
+description: Bergabunglah dengan komunitas React Indonesia untuk mendapatkan informasi terbaru mengenai React dan ekosistemnya.
 ---
 
 Bergabunglah dengan komunitas React Indonesia untuk mendapatkan informasi terbaru mengenai React dan ekosistemnya.
