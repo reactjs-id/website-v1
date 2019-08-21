@@ -2886,7 +2886,7 @@ charenc@~0.0.1:
   resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
   integrity sha1-wKHS86cJLgN3S/qD8UwPxXkKhmc=
 
-cheerio@^1.0.0-rc.2:
+cheerio@^1.0.0-rc.2, cheerio@^1.0.0-rc.3:
   version "1.0.0-rc.3"
   resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-1.0.0-rc.3.tgz#094636d425b2e9c0f4eb91a46c05630c9a1a8bf6"
   integrity sha512-0td5ijfUPuubwLUu0OBoe98gZj8C/AA+RW3v67GPlGOrvxWjZmBXiBCRU+I8VEiNyJzjth40POfHiz2RB3gImA==
@@ -5529,13 +5529,13 @@ gatsby-plugin-netlify@^2.1.1:
     lodash "^4.17.10"
     webpack-assets-manifest "^3.0.2"
 
-gatsby-plugin-offline@^2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.2.4.tgz#154c9c04b5d19bb385eb57a0525cdf3dded74dc6"
-  integrity sha512-vQkO40UI1h6xkUoZ6p86M+F0OyUpbLmqmRopeu7mPAPN+ZaSkWGXXNbIsKtFPSXoqo21Jr4oYq/IuLm3/vKJoA==
+gatsby-plugin-offline@^2.2.8:
+  version "2.2.8"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.2.8.tgz#4ae686e8f2e015f31883be75c960c30ef27fff0a"
+  integrity sha512-ZYZCYvN9Lg3KmO0iSCfeKyxD9besqJP5CLCHwqcKfB1CJ7LsNNvk9Ccv+FZqSXTC7YwKk7sWjMXgdi03hX860Q==
   dependencies:
     "@babel/runtime" "^7.0.0"
-    cheerio "^1.0.0-rc.2"
+    cheerio "^1.0.0-rc.3"
     idb-keyval "^3.1.0"
     lodash "^4.17.14"
     slash "^3.0.0"
