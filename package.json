@@ -75,7 +75,7 @@
     "@types/react-scroll": "^1.5.4",
     "@types/react-transition-group": "^2.9.2",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
-    "@typescript-eslint/parser": "^1.11.0",
+    "@typescript-eslint/parser": "^1.13.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "17.1.1",
     "eslint-config-prettier": "^6.0.0",
