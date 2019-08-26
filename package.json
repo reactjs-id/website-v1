@@ -73,7 +73,7 @@
     "@types/react-dom": "^16.8.4",
     "@types/react-helmet": "^5.0.9",
     "@types/react-scroll": "^1.5.4",
-    "@types/react-transition-group": "^2.9.2",
+    "@types/react-transition-group": "^4.2.2",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
     "eslint": "^5.16.0",
