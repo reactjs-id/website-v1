@@ -6777,10 +6777,10 @@ htmlparser2@^3.10.0, htmlparser2@^3.10.1, htmlparser2@^3.3.0, htmlparser2@^3.9.1
     inherits "^2.0.1"
     readable-stream "^3.1.1"
 
-htmr@^0.8.4:
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/htmr/-/htmr-0.8.4.tgz#bb923d109c45153e50ddce0c021eb4c9ba5d91ab"
-  integrity sha512-N/un1Pnfeq103RKnXBGFMc47GWEyrIVQBIOe/bUnscTwwSfst8MQRUZSKK+Folwgr818Luynw91DMoWlNzJVMg==
+htmr@^0.8.6:
+  version "0.8.6"
+  resolved "https://registry.yarnpkg.com/htmr/-/htmr-0.8.6.tgz#d8927bfe20e2c0625b6155a678c81928088cee4b"
+  integrity sha512-u/853d1NX8BCOSCdoZCUbxUf6j+F81OuNPDflK/3MD3E66RiX/+7OJcgxlcQQnRG/DGsoF4ON9V2XORfxkniYw==
   dependencies:
     html-entities "^1.2.1"
     htmlparser2 "^3.10.1"
