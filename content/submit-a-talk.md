@@ -1,7 +1,6 @@
 ---
 layout: page
 title: 'Ajukan Topik'
-description: Punya ide topik untuk pertemuan berikutnya? Ajukan topikmu disini!
 ---
 
 Punya ide topik untuk pertemuan berikutnya? Ajukan topikmu melalui [repositori GitHub ini](https://github.com/reactjs-id/meetup).
