@@ -9,9 +9,18 @@ interface CustomisableStyleProps {
   headingColor?: string;
 }
 
+interface WithImageProps {
+  imageSource?: string;
+  imageAlt?: string;
+}
+
 interface CenterableProps {
   fullWidth?: boolean;
   centered?: boolean;
+}
+
+interface RightableProps {
+  alignRight?: boolean;
 }
 
 const Section = styled('section')<CustomisableStyleProps>`
@@ -22,10 +31,29 @@ const Section = styled('section')<CustomisableStyleProps>`
   background-color: ${props => props.backgroundColor || colors.gray08};
 `;
 
-const SectionStyles = css`
+const InnerCentered = css`
+  justify-content: center;
+  text-align: center;
+`;
+
+const InnerWithImage = css`
+  justify-content: space-between;
+`;
+
+const SectionInner = styled('div')<WithImageProps & CenterableProps & RightableProps>`
+  display: flex;
+  align-items: center;
+  flex-direction: ${props => (props.alignRight ? 'row-reverse' : 'row')};
+  grid-column: 3/4;
+  width: 100%;
+
+  ${props => props.centered && !props.imageSource && InnerCentered}
+  ${props => props.imageSource && InnerWithImage}
+`;
+
+const BuildContentStyles = css`
   @media (min-width: ${breakpoints.sm}px) {
     max-width: 80%;
-    margin-right: auto;
   }
 
   @media (min-width: ${breakpoints.lg}px) {
@@ -37,11 +65,11 @@ const SectionStyles = css`
   }
 `;
 
-const FullWidthCentered = css`
+const ContentFullWidthCentered = css`
   text-align: center;
 `;
 
-const CenteredStyles = css`
+const ContentHalfWidthCentered = css`
   margin: 0 auto;
   text-align: center;
 
@@ -54,27 +82,42 @@ const CenteredStyles = css`
   }
 `;
 
-const determineSectionContentStyles = (props: CenterableProps) => {
+const determineSectionContentStyles = (props: CenterableProps & RightableProps) => {
   if (props.centered) {
     if (props.fullWidth) {
-      return FullWidthCentered;
+      return ContentFullWidthCentered;
     }
 
-    return CenteredStyles;
+    return ContentHalfWidthCentered;
   }
 
   if (props.fullWidth) {
     return null;
   }
 
-  return SectionStyles;
+  return BuildContentStyles;
 };
 
-const SectionContent = styled('div')<CenterableProps>`
+const SectionContent = styled('div')<CenterableProps & RightableProps>`
   grid-column: 3/4;
   width: 100%;
 
   ${determineSectionContentStyles}
+`;
+
+const SectionImage = styled('div')<RightableProps>`
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  ${props => (props.alignRight ? 'margin-right: 16px;' : 'margin-left: 16px;')}
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    object-fit: contain;
+  }
 `;
 
 const Heading = styled('h2')<CustomisableStyleProps>`
@@ -99,7 +142,11 @@ const Title = styled('h3')`
   }
 `;
 
-interface HomepageSectionProps extends CenterableProps, CustomisableStyleProps {
+interface HomepageSectionProps
+  extends CenterableProps,
+    WithImageProps,
+    RightableProps,
+    CustomisableStyleProps {
   heading?: string;
   title: string;
 }
@@ -109,18 +156,33 @@ function HomepageSection({
   title,
   children,
   centered,
+  alignRight,
   backgroundColor,
   headingColor,
   textColor,
+  imageSource,
+  imageAlt,
   fullWidth,
 }: React.PropsWithChildren<HomepageSectionProps>) {
   return (
     <Section backgroundColor={backgroundColor} textColor={textColor}>
-      <SectionContent centered={centered} fullWidth={fullWidth}>
-        {heading && <Heading headingColor={headingColor}>{heading}</Heading>}
-        <Title>{title}</Title>
-        {children}
-      </SectionContent>
+      <SectionInner
+        centered={centered}
+        alignRight={alignRight}
+        fullWidth={fullWidth}
+        imageSource={imageSource}
+      >
+        <SectionContent centered={centered} alignRight={alignRight} fullWidth={fullWidth}>
+          {heading && <Heading headingColor={headingColor}>{heading}</Heading>}
+          <Title>{title}</Title>
+          {children}
+        </SectionContent>
+        {imageSource && (
+          <SectionImage alignRight={alignRight}>
+            <img src={imageSource} alt={imageAlt} />
+          </SectionImage>
+        )}
+      </SectionInner>
     </Section>
   );
 }
