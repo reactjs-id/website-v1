@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { transparentize } from 'polished';
 import { widths, breakpoints, heights, colors } from '../../styles/variables';
-import logo from '../../assets/images/logo-transparent.png';
+import Logo from '../ui/Logo';
 
 const Root = styled('nav')`
   display: grid;
@@ -57,11 +57,6 @@ const MenuItem = styled('li')`
   }
 `;
 
-const BrandLogo = styled('img')`
-  display: block;
-  height: ${heights.brandLogo}px;
-`;
-
 const HomepageLink = styled(Link)`
   display: flex;
   align-items: center;
@@ -92,7 +87,7 @@ const TopNavigation: React.FC<TopNavigationProps> = ({ title }) => (
     <Inner>
       <Brand>
         <HomepageLink to="/">
-          <BrandLogo src={logo} alt={title} />
+          <Logo height={heights.brandLogo} fill={colors.white} title={title} />
         </HomepageLink>
       </Brand>
       <MenuItem>

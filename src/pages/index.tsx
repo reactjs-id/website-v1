@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
-import { colors, widths } from '../styles/variables';
+import { colors, widths, typeScale } from '../styles/variables';
 import { SiteMetadata, Edge, LeaningMaterial, GatsbyContentNode } from '../interfaces/gatsby';
 
 import LearningCard from '../components/home/LearningCard';
@@ -19,6 +19,26 @@ const LearningCardGrid = styled('div')`
   grid-template-columns: repeat(auto-fit, minmax(calc(${widths.lg}px / 3 - 24px), 1fr));
   grid-gap: 24px;
   margin-top: 36px;
+`;
+
+const CouponCodeWrapper = styled('div')`
+  margin-bottom: 16px;
+`;
+
+const CouponCodeHeading = styled('h4')`
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-transform: uppercase;
+`;
+
+const CouponCode = styled('span')`
+  display: inline-block;
+  font-size: ${typeScale.h4.fontSize}px;
+  line-height: ${typeScale.h4.fontSize}px;
+  font-weight: 700;
 `;
 
 interface IndexPageProps {
@@ -59,6 +79,37 @@ function IndexPage({ data }: IndexPageProps) {
             href="https://www.meetup.com/reactindonesia/"
           >
             Bergabung
+          </CTAButton>
+        </HomepageSection>
+        <HomepageSection
+          alignRight
+          backgroundColor="#f2f2f2"
+          textColor={colors.gray08}
+          headingColor={colors.gray08}
+          imageSource="/images/rk-tshirt.jpg"
+          imageAlt="ReactJS ID T-shirt"
+          heading="Kabar Gembira!"
+          title="Merchandise Resmi ReactJS Indonesia"
+        >
+          <Paragraph>
+            Merchandise resmi ReactJS Indonesia kini tersedia berkat kerjasama oleh Rumah Komunitas.
+            Klik link di bawah untuk mendapatkan <em>T-shirt</em> dan jaket ReactJS Indonesia.
+          </Paragraph>
+          <Paragraph>
+            Dapatkan diskon Rp50.000,- setiap pembelian jaket kami, berlaku hingga tanggal 10
+            September 2019
+          </Paragraph>
+          <CouponCodeWrapper>
+            <CouponCodeHeading>Gunakan kode kupon</CouponCodeHeading>
+            <CouponCode>REACTID</CouponCode>
+          </CouponCodeWrapper>
+          <CTAButton
+            dark
+            inline
+            icon={<ArrowRightIcon fill={colors.gray08} />}
+            href="https://www.rumahkomunitas.com/react-indonesia"
+          >
+            Dapatkan Segera
           </CTAButton>
         </HomepageSection>
         <HomepageSection
