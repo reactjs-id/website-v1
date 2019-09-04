@@ -4,10 +4,10 @@ interface LogoProps extends React.SVGAttributes<SVGSVGElement> {
   title?: string;
 }
 
-function Logo({ fill, width, height, ...rest }: LogoProps) {
+function Logo({ fill, width, height, style, ...rest }: LogoProps) {
   return (
     <svg
-      style={{ isolation: 'isolate' }}
+      style={{ isolation: 'isolate', ...style }}
       viewBox="38 35.221 82.794 42.25"
       width={width}
       height={height}
