@@ -64,7 +64,7 @@
     "react-helmet": "^5.2.1",
     "react-scroll": "^1.7.14",
     "react-transition-group": "^4.3.0",
-    "typescript": "^3.6.2"
+    "typescript": "^3.6.3"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.9",
