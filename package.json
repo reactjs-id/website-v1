@@ -40,7 +40,7 @@
     "gatsby-plugin-manifest": "^2.2.16",
     "gatsby-plugin-netlify": "^2.1.13",
     "gatsby-plugin-netlify-cache": "^1.2.0",
-    "gatsby-plugin-offline": "^3.0.6",
+    "gatsby-plugin-offline": "^3.0.7",
     "gatsby-plugin-react-helmet": "^3.1.7",
     "gatsby-plugin-sharp": "^2.2.22",
     "gatsby-plugin-typescript": "^2.1.7",
