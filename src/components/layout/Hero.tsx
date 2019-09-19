@@ -126,20 +126,18 @@ function Hero({ isHomepage, title }: HeroProps) {
       <Inner>
         <SectionContent>
           <Heading>Meetup Selanjutnya</Heading>
-          <Title>ReactJS Indonesia Meetup July 2019</Title>
-          <DateAndLocation>Selasa, 16 Juli 2019 - 19:00</DateAndLocation>
-          <DateAndLocation>Qlue HQ - Jl. Pejaten Barat No.13, Jakarta Selatan</DateAndLocation>
+          <Title>ReactJS Indonesia Meetup #3</Title>
+          <DateAndLocation>Selasa, 25 September 2019 - 18:30</DateAndLocation>
+          <DateAndLocation>
+            Shopee Indonesia - Pacific Century Place (PCP) Tower, 27th Floor SCBD Lot 10, Jl.
+            Jendral Sudirman No 52-53
+          </DateAndLocation>
           <Paragraph>
-            Setelah tidur panjang selama beberapa saat, mari kita hidupkan kembali komunitas React
-            Indonesia! Seluruh topik di pertemuan ini ramah bagi pemula, namun tetap menarik bagi
-            yang sudah berpengalaman sekalipun.
+            Di Meetup ReactJS Indonesia kali ini, kita ke Shopee Indonesia untuk belajar mengenai
+            Microfrontends dan React Hooks. Seperti biasa, seluruh topik ramah bagi pemula, namun
+            tetap menarik bagi yang sudah berpengalaman sekalipun.
           </Paragraph>
-          <CTAButton
-            light
-            inline
-            icon={<ArrowRightIcon />}
-            href="https://www.meetup.com/reactindonesia/events/263022521/"
-          >
+          <CTAButton light inline icon={<ArrowRightIcon />} href="https://s.reactjs.id/meetup-3">
             RSVP Sekarang
           </CTAButton>
         </SectionContent>
