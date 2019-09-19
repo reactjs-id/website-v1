@@ -129,8 +129,8 @@ function Hero({ isHomepage, title }: HeroProps) {
           <Title>ReactJS Indonesia Meetup #3</Title>
           <DateAndLocation>Selasa, 25 September 2019 - 18:30</DateAndLocation>
           <DateAndLocation>
-            Shopee Indonesia - Pacific Century Place (PCP) Tower, 27th Floor SCBD Lot 10, Jl.
-            Jendral Sudirman No 52-53
+            Shopee Indonesia - Pacific Century Place Tower, 27th Floor SCBD Lot 10, Jl. Jendral
+            Sudirman No 52-53
           </DateAndLocation>
           <Paragraph>
             Di Meetup ReactJS Indonesia kali ini, kita ke Shopee Indonesia untuk belajar mengenai
