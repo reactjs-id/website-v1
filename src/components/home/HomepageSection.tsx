@@ -106,6 +106,7 @@ const SectionContent = styled('div')<CenterableProps & RightableProps>`
 `;
 
 const SectionImage = styled('div')<RightableProps>`
+  display: none;
   width: 100%;
   height: 100%;
   max-height: 400px;
@@ -117,6 +118,10 @@ const SectionImage = styled('div')<RightableProps>`
     height: 100%;
     max-height: 400px;
     object-fit: contain;
+  }
+
+  @media (min-width: ${breakpoints.lg}px) {
+    display: block;
   }
 `;
 
