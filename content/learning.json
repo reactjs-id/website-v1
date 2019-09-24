@@ -29,7 +29,13 @@
     "type": "Kursus Video",
     "title": "Belajar ReactJS Untuk Pemula",
     "description": "Kursus video lengkap dalam bahasa Indonesia untuk mempelajari React, mulai dari pengenalan konsep-konsep dasar hingga men-deploy aplikasi React Anda di berbagai macam provider hosting.",
-    "url": "https://sekolahkoding.com/kelas/belajar-reactjs-untuk-pemula",
+    "url": "https://sekolahkoding.com/kelas/belajar-reactjs-untuk-pemula"
+  },
+  {
+    "type": "Kursus Video",
+    "title": "KODE.id - Membuat Single Page Application dengan React",
+    "description": "Kursus ini dibawakan oleh Riza Fahmi. Membahas semua hal fundamental tentang React. Mulai dari apa dan kenapa menggunakan React, komponen, aliran data, styling component, membaca data hingga membuat aplikasi Single Page App dengan React dan beberapa library penting.",
+    "url": "https://kode.id/kelas/fundamental-react/",
     "featured": true
   }
 ]
