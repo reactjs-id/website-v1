@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 
 import { colors, widths, typeScale } from '../styles/variables';
@@ -13,6 +13,7 @@ import CTAButton from '../components/ui/CTAButton';
 import Page from '../components/layout/Page';
 import ArrowRightIcon from '../components/ui/ArrowRightIcon';
 import PageWrapper from '../components/layout/PageWrapper';
+import '../styles/syntaxHighlighting.css'
 
 const LearningCardGrid = styled('div')`
   display: grid;

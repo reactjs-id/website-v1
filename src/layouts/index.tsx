@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import styled from '@emotion/styled';
 import { StaticQuery, graphql } from 'gatsby';
 // eslint-disable-next-line import/no-extraneous-dependencies
