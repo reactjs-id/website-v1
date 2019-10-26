@@ -37,5 +37,17 @@
     "description": "Kursus ini dibawakan oleh Riza Fahmi. Membahas semua hal fundamental tentang React. Mulai dari apa dan kenapa menggunakan React, komponen, aliran data, styling component, membaca data hingga membuat aplikasi Single Page App dengan React dan beberapa library penting.",
     "url": "https://kode.id/kelas/fundamental-react/",
     "featured": true
+  },
+  {
+    "type": "Kursus Video",
+    "title": "Egghead - Getting Started with Redux",
+    "description": "Kursus ini dibawakan oleh Dan Abramov, pencipta Redux. Membahas konsep dasar Redux sehingga kita dapat mulai menggunakannya untuk menyederhanakan aplikasi React yang kita buat.",
+    "url": "https://egghead.io/courses/getting-started-with-redux"
+  },
+  {
+    "type": "Kursus Video",
+    "title": "Egghead - Building React Applications with Idiomatic Redux",
+    "description": "Kursus ini dibawakan oleh Dan Abramov, pencipta Redux. Membahas berbagai teknik praktis untuk aplikasi yang menggunakan React dan Redux.",
+    "url": "https://egghead.io/courses/building-react-applications-with-idiomatic-redux"
   }
 ]
