@@ -113,3 +113,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Webstorm IDE
+.idea/
