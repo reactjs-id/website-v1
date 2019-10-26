@@ -22,4 +22,8 @@ Semua itu tergantung, pada dasarnya lebih baik untuk belajar logika pemrograman 
 
 #####Bisakah menggunakan Laravel dengan React?
 
-Bisa, pada dasarnya hasil akhir react hanyalah static html file yang bisa di host di manapun, sehingga bisa di konsume oleh bahasa pemrograman server-side. Untuk penggunaanya dapat di baca pada dokumentasi resmi laravel yang bisa dibaca [di sini](https://laravel.com/docs/5.8/frontend#using-react) 
+Bisa, pada dasarnya hasil akhir react hanyalah static html file yang bisa di host di manapun, sehingga bisa di konsume oleh bahasa pemrograman server-side. Untuk penggunaanya dapat di baca pada dokumentasi resmi laravel yang bisa dibaca [di sini](https://laravel.com/docs/5.8/frontend#using-react)
+
+### Apakah Mirza Chilman ganteng?
+
+Oh, tentu tidak.
