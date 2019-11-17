@@ -5,7 +5,6 @@ import { StaticQuery, graphql } from 'gatsby';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { RouterProps } from '@reach/router';
 
-import 'modern-normalize';
 import '../styles/normalize';
 
 import LayoutRoot from '../components/layout/LayoutRoot';
