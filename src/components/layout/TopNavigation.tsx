@@ -5,14 +5,19 @@ import { transparentize } from 'polished';
 import { widths, breakpoints, heights, colors } from '../../styles/variables';
 import Logo from '../ui/Logo';
 
-const Root = styled('nav')`
+interface TopNavigationProps {
+  title: string;
+  isLearningPage?: boolean;
+}
+
+const Root = styled('nav')<Pick<TopNavigationProps, 'isLearningPage'>>`
   display: grid;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   grid-template-columns: 1fr 1fr minmax(auto, ${widths.xl}px) 1fr 1fr;
-  color: ${colors.white};
+  color: ${props => (props.isLearningPage ? colors.black : colors.white)};
   height: ${heights.header}px;
   z-index: 50;
 `;
@@ -78,16 +83,16 @@ const HomepageLink = styled(Link)`
   }
 `;
 
-interface TopNavigationProps {
-  title: string;
-}
-
-const TopNavigation: React.FC<TopNavigationProps> = ({ title }) => (
-  <Root>
+const TopNavigation: React.FC<TopNavigationProps> = ({ title, isLearningPage }) => (
+  <Root isLearningPage={isLearningPage}>
     <Inner>
       <Brand>
         <HomepageLink to="/">
-          <Logo height={heights.brandLogo} fill={colors.white} title={title} />
+          <Logo
+            height={heights.brandLogo}
+            fill={isLearningPage ? colors.black : colors.white}
+            title={title}
+          />
         </HomepageLink>
       </Brand>
       <MenuItem>

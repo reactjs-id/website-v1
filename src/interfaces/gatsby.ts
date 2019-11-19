@@ -18,4 +18,5 @@ export interface LeaningMaterial {
   title: string;
   description: string;
   url: string;
+  featured?: boolean;
 }

@@ -65,7 +65,10 @@ const IndexLayout: React.FC<RouterProps> = ({ children, location }) => {
             <meta property="og:description" content={data.site.siteMetadata.description} />
             <meta name="twitter:dnt" content="on" />
           </Helmet>
-          <TopNavigation title={data.site.siteMetadata.title} />
+          <TopNavigation
+            title={data.site.siteMetadata.title}
+            isLearningPage={location && location.pathname.startsWith('/learning')}
+          />
           <TopNavigationShellFallback />
           <LayoutMain>{children}</LayoutMain>
           <Footer />
