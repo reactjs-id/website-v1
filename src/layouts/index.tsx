@@ -67,7 +67,7 @@ const IndexLayout: React.FC<RouterProps> = ({ children, location }) => {
           </Helmet>
           <TopNavigation
             title={data.site.siteMetadata.title}
-            isLearningPage={location && location.pathname.startsWith('/learning')}
+            isLearningPage={location && location.pathname === '/learning'}
           />
           <TopNavigationShellFallback />
           <LayoutMain>{children}</LayoutMain>
