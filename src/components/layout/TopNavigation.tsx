@@ -16,6 +16,7 @@ const Root = styled('nav')`
   left: 0;
   width: 100%;
   grid-template-columns: 1fr 1fr minmax(auto, ${widths.xl}px) 1fr 1fr;
+  color: ${colors.white};
   height: ${heights.header}px;
   z-index: 50;
 `;
