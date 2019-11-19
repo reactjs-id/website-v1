@@ -3,7 +3,7 @@ layout: page
 title: 'FAQ'
 ---
 
-Halaman ini berisi pertanyaan yang sering ditanyakan pada grup Telegram kami. Ingin menambahkan pertanyaan baru? submit di [repositori GitHub ini](https://github.com/reactjs-id/meetup).
+Halaman ini berisi pertanyaan yang sering ditanyakan pada grup Telegram kami. Ingin menambahkan pertanyaan baru? Submit di [repositori GitHub ini](https://github.com/reactjs-id/reactjs.id).
 
 ### Saya masih _newbie_. Boleh minta e-book untuk belajar React? Adakah tutorial React berbahasa Indonesia?
 
