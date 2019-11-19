@@ -7,17 +7,15 @@ import Logo from '../ui/Logo';
 
 interface TopNavigationProps {
   title: string;
-  isLearningPage?: boolean;
 }
 
-const Root = styled('nav')<Pick<TopNavigationProps, 'isLearningPage'>>`
+const Root = styled('nav')`
   display: grid;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   grid-template-columns: 1fr 1fr minmax(auto, ${widths.xl}px) 1fr 1fr;
-  color: ${props => (props.isLearningPage ? colors.black : colors.white)};
   height: ${heights.header}px;
   z-index: 50;
 `;
@@ -83,16 +81,12 @@ const HomepageLink = styled(Link)`
   }
 `;
 
-const TopNavigation: React.FC<TopNavigationProps> = ({ title, isLearningPage }) => (
-  <Root isLearningPage={isLearningPage}>
+const TopNavigation: React.FC<TopNavigationProps> = ({ title }) => (
+  <Root>
     <Inner>
       <Brand>
         <HomepageLink to="/">
-          <Logo
-            height={heights.brandLogo}
-            fill={isLearningPage ? colors.black : colors.white}
-            title={title}
-          />
+          <Logo height={heights.brandLogo} fill={colors.white} title={title} />
         </HomepageLink>
       </Brand>
       <MenuItem>

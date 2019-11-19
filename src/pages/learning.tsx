@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 import PageWrapper from '../components/layout/PageWrapper';
 import { SiteMetadata, Edge, GatsbyContentNode, LeaningMaterial } from '../interfaces/gatsby';
 import HomepageSection from '../components/home/HomepageSection';
-import { colors } from '../styles/variables';
+import { colors, heights } from '../styles/variables';
 import Paragraph from '../components/ui/Paragraph';
 import LearningCardGrid from '../components/learning/LearningCardGrid';
 import LearningCard from '../components/learning/LearningCard';
@@ -21,7 +21,7 @@ interface LearningPageProps {
 }
 
 const LearningSection = styled(HomepageSection)`
-  padding-top: 136px;
+  margin-top: ${heights.header}px;
   flex: 1;
 `;
 
