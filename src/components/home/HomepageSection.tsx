@@ -152,11 +152,15 @@ interface HomepageSectionProps
     WithImageProps,
     RightableProps,
     CustomisableStyleProps {
+  className?: string;
+  style?: React.CSSProperties;
   heading?: string;
   title: string;
 }
 
 function HomepageSection({
+  className,
+  style,
   heading,
   title,
   children,
@@ -170,7 +174,12 @@ function HomepageSection({
   fullWidth,
 }: React.PropsWithChildren<HomepageSectionProps>) {
   return (
-    <Section backgroundColor={backgroundColor} textColor={textColor}>
+    <Section
+      className={className}
+      style={style}
+      backgroundColor={backgroundColor}
+      textColor={textColor}
+    >
       <SectionInner
         centered={centered}
         alignRight={alignRight}

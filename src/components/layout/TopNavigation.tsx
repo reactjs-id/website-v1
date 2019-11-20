@@ -5,6 +5,10 @@ import { transparentize } from 'polished';
 import { widths, breakpoints, heights, colors } from '../../styles/variables';
 import Logo from '../ui/Logo';
 
+interface TopNavigationProps {
+  title: string;
+}
+
 const Root = styled('nav')`
   display: grid;
   position: absolute;
@@ -77,10 +81,6 @@ const HomepageLink = styled(Link)`
     font-size: 1.5rem;
   }
 `;
-
-interface TopNavigationProps {
-  title: string;
-}
 
 const TopNavigation: React.FC<TopNavigationProps> = ({ title }) => (
   <Root>

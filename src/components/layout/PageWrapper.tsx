@@ -12,12 +12,19 @@ const Root = styled('section')`
 interface PageWrapperProps {
   className?: string;
   isHomepage?: boolean;
+  isLearningPage?: boolean;
   title?: string;
 }
 
-const PageWrapper: React.FC<PageWrapperProps> = ({ children, className, title, isHomepage }) => (
+const PageWrapper: React.FC<PageWrapperProps> = ({
+  children,
+  className,
+  title,
+  isHomepage,
+  isLearningPage,
+}) => (
   <>
-    <Hero title={title} isHomepage={isHomepage} />
+    <Hero title={title} isHomepage={isHomepage} isLearningPage={isLearningPage} />
     <Root className={className}>{children}</Root>
   </>
 );

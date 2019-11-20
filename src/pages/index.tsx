@@ -3,23 +3,18 @@ import styled from '@emotion/styled';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
-import { colors, widths, typeScale } from '../styles/variables';
+import { colors, typeScale } from '../styles/variables';
 import { SiteMetadata, Edge, LeaningMaterial, GatsbyContentNode } from '../interfaces/gatsby';
 
-import LearningCard from '../components/home/LearningCard';
+import LearningCard from '../components/learning/LearningCard';
 import HomepageSection from '../components/home/HomepageSection';
 import Paragraph from '../components/ui/Paragraph';
 import CTAButton from '../components/ui/CTAButton';
 import Page from '../components/layout/Page';
 import ArrowRightIcon from '../components/ui/ArrowRightIcon';
 import PageWrapper from '../components/layout/PageWrapper';
-
-const LearningCardGrid = styled('div')`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(${widths.lg}px / 3 - 24px), 1fr));
-  grid-gap: 24px;
-  margin-top: 36px;
-`;
+import LearningCardGrid from '../components/learning/LearningCardGrid';
+import LearningCTAButton from '../components/learning/LearningCTALink';
 
 const CouponCodeWrapper = styled('div')`
   margin-bottom: 16px;
@@ -41,6 +36,10 @@ const CouponCode = styled('span')`
   font-weight: 700;
 `;
 
+const LearningCTA = styled('div')`
+  margin-top: 64px;
+`;
+
 interface IndexPageProps {
   data: {
     site: {
@@ -53,6 +52,8 @@ interface IndexPageProps {
 function IndexPage({ data }: IndexPageProps) {
   const { site, learning } = data;
   const { siteMetadata } = site;
+
+  const featuredMaterials = learning.edges.filter(({ node }) => node.featured);
 
   return (
     <PageWrapper isHomepage>
@@ -127,12 +128,20 @@ function IndexPage({ data }: IndexPageProps) {
             yang baru saja memulai. Cobalah memulai dari salah satu materi di bawah.
           </Paragraph>
           <LearningCardGrid>
-            {learning.edges.map(({ node }) => (
+            {featuredMaterials.map(({ node }) => (
               <LearningCard key={node.id} heading={node.type} title={node.title} href={node.url}>
                 <Paragraph>{node.description}</Paragraph>
               </LearningCard>
             ))}
           </LearningCardGrid>
+          <LearningCTA>
+            <LearningCTAButton to="/learning">
+              <span>Lihat Selengkapnya</span>{' '}
+              <span className="icon">
+                <ArrowRightIcon />
+              </span>
+            </LearningCTAButton>
+          </LearningCTA>
         </HomepageSection>
       </Page>
     </PageWrapper>
@@ -158,6 +167,7 @@ export const query = graphql`
           title
           description
           url
+          featured
         }
       }
     }

@@ -113,38 +113,43 @@ const DateAndLocation = styled('h4')`
 
 interface HeroProps {
   isHomepage?: boolean;
+  isLearningPage?: boolean;
   title?: string;
 }
 
-function Hero({ isHomepage, title }: HeroProps) {
-  if (!isHomepage) {
-    return <Headbar title={title} />;
+function Hero({ isHomepage, isLearningPage, title }: HeroProps) {
+  if (isHomepage) {
+    return (
+      <Root>
+        <Inner>
+          <SectionContent>
+            <Heading>Meetup Selanjutnya</Heading>
+            <Title>ReactJS Indonesia Meetup #4</Title>
+            <DateAndLocation>Selasa, 29 Oktober 2019 - 18:30</DateAndLocation>
+            <DateAndLocation>
+              Hacktiv8 Indonesia
+              <br />
+              RT.5/RW.9, Kebayoran Lama Selatan, Kebayoran Lama, RT.5/RW.9 · Kota Jakarta Selatan
+            </DateAndLocation>
+            <Paragraph>
+              Di Meetup ReactJS Indonesia kali ini, kita ke Hacktiv8 Indonesia untuk belajar
+              mengenai pembuatan framework dan perbedaan SPA vs SSR di React. Seperti biasa, seluruh
+              topik ramah bagi pemula, namun tetap menarik bagi yang sudah berpengalaman sekalipun.
+            </Paragraph>
+            <CTAButton light inline icon={<ArrowRightIcon />} href="https://s.reactjs.id/meetup-4">
+              RSVP Sekarang
+            </CTAButton>
+          </SectionContent>
+        </Inner>
+      </Root>
+    );
   }
 
-  return (
-    <Root>
-      <Inner>
-        <SectionContent>
-          <Heading>Meetup Selanjutnya</Heading>
-          <Title>ReactJS Indonesia Meetup #4</Title>
-          <DateAndLocation>Selasa, 29 Oktober 2019 - 18:30</DateAndLocation>
-          <DateAndLocation>
-            Hacktiv8 Indonesia
-            <br />
-            RT.5/RW.9, Kebayoran Lama Selatan, Kebayoran Lama, RT.5/RW.9 · Kota Jakarta Selatan
-          </DateAndLocation>
-          <Paragraph>
-            Di Meetup ReactJS Indonesia kali ini, kita ke Hacktiv8 Indonesia untuk belajar mengenai
-            pembuatan framework dan perbedaan SPA vs SSR di React. Seperti biasa, seluruh topik
-            ramah bagi pemula, namun tetap menarik bagi yang sudah berpengalaman sekalipun.
-          </Paragraph>
-          <CTAButton light inline icon={<ArrowRightIcon />} href="https://s.reactjs.id/meetup-4">
-            RSVP Sekarang
-          </CTAButton>
-        </SectionContent>
-      </Inner>
-    </Root>
-  );
+  if (isLearningPage) {
+    return null;
+  }
+
+  return <Headbar title={title} />;
 }
 
 Hero.defaultProps = {
