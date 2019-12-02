@@ -20,4 +20,4 @@ Semua itu tergantung. Pada dasarnya, lebih baik untuk belajar logika pemrograman
 
 ### Bisakah menggunakan Laravel dengan React?
 
-Tentu bisa. Pada dasarnya, hasil _output_ React hanyalah _file_ HTML statis yang dapat diunggah di _host_ manapun. Untuk panduan menggunakan Laravel dengan React, baca [dokumentasi Laravel](https://laravel.com/docs/5.8/frontend#using-react) berikut ini.
+Tentu bisa. Pada dasarnya, hasil _output_ React hanyalah _file_ HTML statis yang dapat diunggah di _host_ manapun. Untuk panduan menggunakan Laravel dengan React, baca [dokumentasi Laravel](https://laravel.com/docs/6.x/frontend#using-react) berikut ini.
