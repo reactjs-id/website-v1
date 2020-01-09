@@ -50,7 +50,7 @@
     "gatsby-remark-responsive-iframe": "^2.2.30",
     "gatsby-remark-smartypants": "^2.1.19",
     "gatsby-source-filesystem": "^2.1.43",
-    "gatsby-transformer-json": "^2.2.19",
+    "gatsby-transformer-json": "^2.2.25",
     "gatsby-transformer-remark": "^2.6.42",
     "gatsby-transformer-sharp": "^2.3.9",
     "htmr": "^0.8.6",
