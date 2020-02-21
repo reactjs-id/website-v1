@@ -21,3 +21,11 @@ Semua itu tergantung. Pada dasarnya, lebih baik untuk belajar logika pemrograman
 ### Bisakah menggunakan Laravel dengan React?
 
 Tentu bisa. Pada dasarnya, hasil _output_ React hanyalah _file_ HTML statis yang dapat diunggah di _host_ manapun. Untuk panduan menggunakan Laravel dengan React, baca [dokumentasi Laravel](https://laravel.com/docs/6.x/frontend#using-react) berikut ini.
+
+### Apakah Google (SEO) tidak bisa membaca SPA (JS, React, Vue,dll) ?
+Tentu bisa. Mau itu Multiple Page Application (MPA) / Single Page Application (SPA), selama kita (manusia) bisa membaca, 
+maka bot search engine juga bisa membacanya, karena GoogleBot juga pakai Chrome yang kita pakai. [~Pradita Utama](https://t.me/react_id/79365)
+
+Referensi terkait SEO : 
+1. [Mitos tentang SEO dan SPA](https://t.me/react_id/77390)
+2. [Javascript, Sosial Media dan SEO](https://medium.com/@pradita.utama/javascript-sosial-media-dan-seo-d9c4940e60fd)
