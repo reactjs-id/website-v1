@@ -10,8 +10,6 @@ import '../styles/normalize';
 import LayoutRoot from '../components/layout/LayoutRoot';
 import TopNavigation from '../components/layout/TopNavigation';
 import Footer from '../components/layout/Footer';
-import useVerticalScroll from '../utils/useVerticalScroll';
-import ScrollToContent from '../components/layout/ScrollToContent';
 import LayoutMain from '../components/layout/LayoutMain';
 import { heights, colors } from '../styles/variables';
 
@@ -47,9 +45,7 @@ const query = graphql`
   }
 `;
 
-const IndexLayout: React.FC<RouterProps> = ({ children, location }) => {
-  const isScrollVisible = useVerticalScroll(0, 299);
-
+const IndexLayout: React.FC<RouterProps> = ({ children }) => {
   return (
     <StaticQuery
       query={query}
@@ -69,9 +65,6 @@ const IndexLayout: React.FC<RouterProps> = ({ children, location }) => {
           <TopNavigationShellFallback />
           <LayoutMain>{children}</LayoutMain>
           <Footer />
-          {location && location.pathname === '/' && (
-            <ScrollToContent isScrollVisible={isScrollVisible} />
-          )}
         </LayoutRoot>
       )}
     />

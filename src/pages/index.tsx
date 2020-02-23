@@ -56,7 +56,7 @@ function IndexPage({ data }: IndexPageProps) {
   const featuredMaterials = learning.edges.filter(({ node }) => node.featured);
 
   return (
-    <PageWrapper isHomepage>
+    <PageWrapper>
       <Page>
         <Helmet>
           <title>
