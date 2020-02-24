@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
-import { colors, typeScale } from '../styles/variables';
+import { colors } from '../styles/variables';
 import { SiteMetadata, Edge, LeaningMaterial, GatsbyContentNode } from '../interfaces/gatsby';
 
 import LearningCard from '../components/learning/LearningCard';
@@ -15,26 +15,6 @@ import ArrowRightIcon from '../components/ui/ArrowRightIcon';
 import PageWrapper from '../components/layout/PageWrapper';
 import LearningCardGrid from '../components/learning/LearningCardGrid';
 import LearningCTAButton from '../components/learning/LearningCTALink';
-
-const CouponCodeWrapper = styled('div')`
-  margin-bottom: 16px;
-`;
-
-const CouponCodeHeading = styled('h4')`
-  margin-top: 0;
-  margin-bottom: 8px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
-  text-transform: uppercase;
-`;
-
-const CouponCode = styled('span')`
-  display: inline-block;
-  font-size: ${typeScale.h4.fontSize}px;
-  line-height: ${typeScale.h4.fontSize}px;
-  font-weight: 700;
-`;
 
 const LearningCTA = styled('div')`
   margin-top: 64px;
@@ -96,14 +76,6 @@ function IndexPage({ data }: IndexPageProps) {
             Merchandise resmi ReactJS Indonesia kini tersedia berkat kerjasama oleh Rumah Komunitas.
             Klik link di bawah untuk mendapatkan <em>T-shirt</em> dan jaket ReactJS Indonesia.
           </Paragraph>
-          <Paragraph>
-            Dapatkan diskon Rp50.000,- setiap pembelian jaket kami, berlaku hingga tanggal 10
-            September 2019
-          </Paragraph>
-          <CouponCodeWrapper>
-            <CouponCodeHeading>Gunakan kode kupon</CouponCodeHeading>
-            <CouponCode>REACTID</CouponCode>
-          </CouponCodeWrapper>
           <CTAButton
             dark
             inline
