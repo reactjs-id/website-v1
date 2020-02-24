@@ -9,7 +9,7 @@ import { HtmrOptions } from 'htmr/src/types';
 
 import { Link } from 'gatsby';
 import { transparentize } from 'polished';
-import { typeScale, colors, breakpoints } from '../../styles/variables';
+import { typeScale, colors, breakpoints, heights } from '../../styles/variables';
 
 const Root = styled('div')`
   grid-column: 3/4;
@@ -123,6 +123,7 @@ const Title = styled('section')`
 
 const Content = styled('section')`
   padding: 24px;
+  padding-bottom: calc(${heights.header}px + 24px);
 `;
 
 interface PageProps {

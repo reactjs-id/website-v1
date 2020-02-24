@@ -1,38 +1,9 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { keyframes, css } from '@emotion/core';
+import { css } from '@emotion/core';
 
-import patternImage from '../../assets/images/shattered-dark.png';
 import { heights, colors, typeScale, widths } from '../../styles/variables';
-
-const flicker = keyframes`
-  0% {
-    background-position: 0% 50%
-  }
-  50% {
-    background-position: 100% 50%
-  }
-  100% {
-    background-position: 0% 50%
-  }
-`;
-
-const pattern = css`
-  background-image: linear-gradient(to right bottom, #49318c, #8b348b, #bc4183, #e05978, #f87b6e);
-  background-size: 400% 400%;
-  animation: ${flicker} 15s ease infinite;
-  z-index: 1;
-
-  &::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-image: url(${patternImage});
-  }
-`;
+import { topography } from '../../styles/pattern';
 
 const HeadingsBase = css`
   margin-top: 24px;
@@ -64,7 +35,7 @@ const Root = styled('header')`
   min-height: ${heights.header}px;
   padding-top: ${heights.header}px;
 
-  ${pattern}
+  ${topography}
 `;
 
 const Title = styled('div')`
@@ -75,18 +46,16 @@ interface HeadbarProps {
   title?: string;
 }
 
-const Headbar: React.FC<HeadbarProps> = ({ title }) => {
+const PageHeader: React.FC<HeadbarProps> = ({ title }) => {
   return (
     <Root>
-      {title && (
-        <Inner>
-          <Title>
-            <H1>{title}</H1>
-          </Title>
-        </Inner>
-      )}
+      <Inner>
+        <Title>
+          <H1>{title}</H1>
+        </Title>
+      </Inner>
     </Root>
   );
 };
 
-export default Headbar;
+export default PageHeader;
