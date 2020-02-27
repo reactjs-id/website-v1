@@ -29,3 +29,12 @@ maka bot search engine juga bisa membacanya, karena GoogleBot juga pakai Chrome 
 Referensi terkait SEO : 
 1. [Mitos tentang SEO dan SPA](https://t.me/react_id/77390)
 2. [Javascript, Sosial Media dan SEO](https://medium.com/@pradita.utama/javascript-sosial-media-dan-seo-d9c4940e60fd)
+
+### Bagaimana mengatasi error CORS saat fetching API ?
+1. CORS itu harus diubah di sisi backend, bukan sisi front end.
+2. Jadi ketika kita mengakses resource dari domain / server tertentu, si server tersebut harus allow domain kita / semua domain untuk mengakses resource yang ada di servernya. Caranya (di sisi backend ya) dengan menambahkan response header `Access-Control-Allow-Origin: * `
+3. CORS itu bukan bug, dia adalah safety feature agar server API kita gak bisa diakses sembarangan oleh browser
+[~Pradita Utama](https://t.me/react_id/55955)
+
+Referensi terkait CORS:
+1. [Gambaran tentang CORS](https://twitter.com/b0rk/status/1162392625057583104?s=19)
