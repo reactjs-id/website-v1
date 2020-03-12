@@ -11,11 +11,8 @@ interface TopNavigationProps {
 
 const Root = styled('nav')`
   display: grid;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   grid-template-columns: 1fr 1fr minmax(auto, ${widths.xl}px) 1fr 1fr;
+  background-color: ${colors.gray08};
   color: ${colors.white};
   height: ${heights.header}px;
   z-index: 50;

@@ -1,43 +1,13 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { keyframes, css } from '@emotion/core';
 
-import { heights, widths, breakpoints, typeScale, colors } from '../../styles/variables';
+import { widths, breakpoints, typeScale, colors } from '../../styles/variables';
+import { topography } from '../../styles/pattern';
 import Paragraph from '../ui/Paragraph';
 import CTAButton from '../ui/CTAButton';
 import ArrowRightIcon from '../ui/ArrowRightIcon';
 
-import patternImage from '../../assets/images/shattered-dark.png';
-import Headbar from './Headbar';
-
-const flicker = keyframes`
-  0% {
-    background-position: 0% 50%
-  }
-  50% {
-    background-position: 100% 50%
-  }
-  100% {
-    background-position: 0% 50%
-  }
-`;
-
-export const pattern = css`
-  background-image: linear-gradient(to right bottom, #49318c, #8b348b, #bc4183, #e05978, #f87b6e);
-  background-size: 400% 400%;
-  animation: ${flicker} 15s ease infinite;
-  z-index: 1;
-
-  &::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-image: url(${patternImage});
-  }
-`;
+import PageHeader from './PageHeader';
 
 const Root = styled('header')`
   position: relative;
@@ -47,8 +17,7 @@ const Root = styled('header')`
   height: 100%;
   min-height: calc(100vh - 60px);
   padding: 24px;
-  padding-top: calc(${heights.header}px + 24px);
-  ${pattern}
+  ${topography}
 `;
 
 const Inner = styled('div')`
@@ -145,11 +114,11 @@ function Hero({ isHomepage, isLearningPage, title }: HeroProps) {
     );
   }
 
-  if (isLearningPage) {
-    return null;
+  if (title && !isLearningPage) {
+    return <PageHeader title={title} />;
   }
 
-  return <Headbar title={title} />;
+  return null;
 }
 
 Hero.defaultProps = {
