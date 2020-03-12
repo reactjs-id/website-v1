@@ -49,5 +49,11 @@
     "title": "Egghead - Building React Applications with Idiomatic Redux",
     "description": "Kursus ini dibawakan oleh Dan Abramov, pencipta Redux. Membahas berbagai teknik praktis untuk aplikasi yang menggunakan React dan Redux.",
     "url": "https://egghead.io/courses/building-react-applications-with-idiomatic-redux"
+  },
+  {
+    "type": "Kursus Video",
+    "title": "LampungDev - Dasar Dasar Reactjs + Studi Kasus",
+    "description": "Kursus ini dibawakan oleh M Danil Rafiqi. Membahas mengenai dasar dasar reactjs dan studi kasus membuat Dashboard Admin menggunakan React Antd",
+    "url": "https://www.youtube.com/playlist?list=PLp6BJq2fT_g91yCNCWi_bIe-ng7S7rt6V"
   }
 ]
