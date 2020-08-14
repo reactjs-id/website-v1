@@ -88,6 +88,9 @@ const TopNavigation: React.FC<TopNavigationProps> = ({ title }) => (
         </HomepageLink>
       </Brand>
       <MenuItem>
+        <Link to="/challenges">Tantangan</Link>
+      </MenuItem>
+      <MenuItem>
         <Link to="/community">Komunitas</Link>
       </MenuItem>
       <MenuItem>
