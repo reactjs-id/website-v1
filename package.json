@@ -51,7 +51,7 @@
     "gatsby-remark-smartypants": "^2.1.19",
     "gatsby-source-filesystem": "^2.1.43",
     "gatsby-transformer-json": "^2.2.27",
-    "gatsby-transformer-remark": "^2.6.42",
+    "gatsby-transformer-remark": "^2.8.32",
     "gatsby-transformer-sharp": "^2.3.9",
     "htmr": "^0.8.6",
     "modern-normalize": "^0.6.0",
